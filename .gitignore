@@ -1,0 +1,16 @@
+!/.idea/
+/.idea/*
+!codeStyleSettings.xml
+node_modules
+npm-debug.log
+.DS_Store
+*.iml
+*.swp
+*.state
+dist
+/resources
+build
+*.tar.gz
+.idea
+.idea/*
+isolate-*-v8.log

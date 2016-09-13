@@ -21,6 +21,7 @@
 
 <div id="optionB"></div>
 
+<button id="reset"> Reset </button>
 
 
 <script src="socket.io/socket.io.js"></script>
@@ -39,6 +40,20 @@ console.log(_data);
         $('#optionB').html(_data.test.sample.optionB);
         <!--$('time').html('Last Update:' + new Date());-->
     });
+
+    socket.on('next', function (data) {
+        // convert the json string into a valid javascript object
+
+        console.log(data);
+        $('#container').html(data);
+        $('time').html('Last Update:' + new Date());
+    });
+
+    $(document).ready(function(){
+        $('#reset').click(function(e){
+          socket.emit('reset', {'call': 'reset'});
+        });
+      });
 
     </script>
 </body>

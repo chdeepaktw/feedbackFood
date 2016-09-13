@@ -18,15 +18,19 @@ function handler(req, res) {
     var path = url.parse(req.url).pathname;
     switch (path){
         case '/':
-            initialLoad(req,res);
+            loadPage(req,res,'/client/game.html');
+            break;
+        case '/question_pool.js':
+            loadPage(req,res,'/client/'+path);
             break;
         case '/next':
             triggerNextQuestion(req,res);
             res.writeHead(200);
             res.end('Request Completed');
             break;
-         default:
-            send404(res);
+        default:
+            loadPage(req,res,'/client/'+path);
+            break;
     }
 }
 
@@ -36,11 +40,12 @@ send404 = function(res){
     res.end();
 };
 
-function initialLoad (req,res){
-       fs.readFile(__dirname + '/client.html', function(err, data) {
+function loadPage (req,res, file){
+       fs.readFile(__dirname + file, function(err, data) {
            if (err){
                  console.log(err);
                  res.writeHead(500);
+
                  return res.end('Error loading client.html');
            }
                 res.writeHead(200);

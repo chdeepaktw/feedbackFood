@@ -5,6 +5,7 @@
             resetSession()
         }else{
             nextQuestion();
+            displayQuestion();
         }
     }
 

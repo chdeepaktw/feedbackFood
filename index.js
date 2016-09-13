@@ -1,6 +1,6 @@
 var app = require('http').createServer(handler),
   io = require('socket.io').listen(app),
-//  parser = new require('xml2json'),
+  parser = new require('xml2json'),
   fs = require('fs');
 
 // creating the server ( localhost:8000 )

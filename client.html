@@ -10,7 +10,19 @@
 </head>
 <body>
 <time></time>
-<div id="container">Try to change your xml data to update this content</div>
+
+<div id="container"><H1>Welcome to Design Kiosk</H1></div>
+
+<div id="questionId"></div>
+
+<div id="question"></div>
+
+<div id="optionA"></div>
+
+<div id="optionB"></div>
+
+
+
 <script src="socket.io/socket.io.js"></script>
 <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script>
@@ -20,10 +32,14 @@
     socket.on('notification', function (data) {
         // convert the json string into a valid javascript object
         var _data = JSON.parse(data);
-
-        $('#container').html(_data.test.sample);
-        $('time').html('Last Update:' + new Date());
+console.log(_data);
+        $('#container').html("");
+        $('#question').html(_data.test.sample.question);
+        $('#optionA').html(_data.test.sample.optionA);
+        $('#optionB').html(_data.test.sample.optionB);
+        <!--$('time').html('Last Update:' + new Date());-->
     });
+
     </script>
 </body>
 </html>

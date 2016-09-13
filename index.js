@@ -30,14 +30,11 @@ function handler(req, res) {
     }
 }
 
-
 send404 = function(res){
     res.writeHead(404);
     res.write('404');
     res.end();
 };
-
-
 
 function initialLoad (req,res){
        fs.readFile(__dirname + '/client.html', function(err, data) {
@@ -52,10 +49,12 @@ function initialLoad (req,res){
 }
 
 function triggerNextQuestion (req,res){
+    console.log('next call');
     fs.readFile(__dirname + '/example.xml', function(err, data) {
           if (err) throw err;
         // parsing the new xml data and converting them into json file
         var json = parser.toJson(data);
+        console.log('data '+data);
         // send the new data to the client
         socketGlobal.volatile.emit('notification', json);
     });

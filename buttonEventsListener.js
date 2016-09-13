@@ -7,19 +7,29 @@ module.exports = {
   listenButtonEvents: function (pinNumber,buttonIdentifier) {
     while(true){
        gpio.read(pinNumber, function(err, value) {
-            read(pinNumber,err, value)
+            if(err) {
+                console.error('ERROR:'+ err);
+            }else{
+                setTimeout(handleButtonEvent(buttonIdentifier,value),0)
+            }
        });
+
+       console.log('pause listening')
+       setTimeout(onResume, 200)
     }
+  },
+
+  handleButtonEvent : function(buttonIdentifier,value){
+      console.log(value + ':' + buttonIdentifier);	// The current state of the pin
+      // change state and trigger socker
+  },
+
+  onResume : function(){
+      console.log('resume listening')
   }
 };
 
 
-dispatchEvent = function(buttonValue){
-        console.log('dispatch event')
-}
 
-read = function(pinNumber,err, value){
-    if(err) throw err;
-    console.log(value + ':' + buttonIdentifier);	// The current state of the pin
-    setTimeout(dispatchEvent(value,buttonIdentifier), 200)
-}
+
+

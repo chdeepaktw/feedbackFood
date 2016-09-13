@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XD challenge !!</title>
+
+</head>
+<body onload="newSession(3)">
+
+<div id="questions">
+
+<input type="button"  value="New Session" onclick="newSession(3)">
+
+<h1>Question : </h1>
+<h2 id="question"></h2>
+
+<input type="button" value="True" onclick="doAnswer(1)">
+
+<input type="button" value="False" onclick="doAnswer(0)">
+
+
+</div>
+
+<h2 id="score"></h2>
+
+
+<script type="text/javascript" src="question_pool.js" ></script>
+
+<script type="text/javascript" src="session_manager.js" ></script>
+
+<script type="text/javascript" src="game.js"></script>
+
+
+</body>
+</html>

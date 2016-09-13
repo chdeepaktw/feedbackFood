@@ -10,6 +10,7 @@ module.exports = {
             if(err) {
                 console.error('ERROR:'+ err);
             }else{
+                // handle event asynchronously
                 setTimeout(handleButtonEvent(buttonIdentifier,value),0)
             }
        });
@@ -21,15 +22,10 @@ module.exports = {
 
   handleButtonEvent : function(buttonIdentifier,value){
       console.log(value + ':' + buttonIdentifier);	// The current state of the pin
-      // change state and trigger socker
+      // notify UI using web socket
   },
 
   onResume : function(){
       console.log('resume listening')
   }
 };
-
-
-
-
-

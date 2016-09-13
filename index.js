@@ -18,7 +18,6 @@ function handler(req, res) {
     var path = url.parse(req.url).pathname;
     switch (path){
         case '/':
-        default:
             initialLoad(req,res);
             break;
         case '/next':
@@ -26,8 +25,19 @@ function handler(req, res) {
             res.writeHead(200);
             res.end('Request Completed');
             break;
+         default:
+            send404(res);
     }
 }
+
+
+send404 = function(res){
+    res.writeHead(404);
+    res.write('404');
+    res.end();
+};
+
+
 
 function initialLoad (req,res){
        fs.readFile(__dirname + '/client.html', function(err, data) {

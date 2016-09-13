@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <test>
-    <sample>Hello world!!!!This is push notifiv=cation :1</sample>
+    <sample>
+        <question>User Experience is  ... ? </question>
+        <optionA> Science </optionA>
+        <optionB> Art </optionB>
+    </sample>
 </test>

@@ -1,0 +1,22 @@
+[
+  {
+  "qId": 1,
+  "question": "Who invented Design ?",
+  "options": ["Smith", "Bob"],
+  "answer": "Smith"
+  },
+
+  {
+    "qId": 2,
+    "question": "Who designed Facebook ?",
+    "options": ["Tom","Smith"],
+    "answer": "Smith"
+  },
+
+  {
+    "qId": 3,
+    "question": "Who was the first designer recruited by ThoughtWorks ?",
+    "options": ["Somya","Ruchi"],
+    "answer": "Ruchi"
+  }
+]

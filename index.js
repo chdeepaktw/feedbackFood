@@ -1,57 +1,34 @@
-var app = require('http').createServer(handler),
-  io = require('socket.io').listen(app),
-  parser = new require('xml2json'),
-  fs = require('fs');
+var http = require('http');
+var express = require('express');
+var app = module.exports.app = express();
+var server = http.createServer(app);
+var io = require('socket.io').listen(server);
 
-var url = require('url');
+var parser = new require('xml2json');
+var fs = require('fs');
+
+app.use(express.static('client'));
+
 var socketGlobal;
 
-// creating the server ( localhost:8000 )
-app.listen(8000);
-
+server.listen(8000);
 console.log('server listening on localhost:8000');
 
-// on server started we can load our client.html page
-function handler(req, res) {
+app.get('/next', function (req, res) {
+    triggerNextQuestion();
+    res.send('Request Completed');
+});
 
-// your normal server code
-    var path = url.parse(req.url).pathname;
-    switch (path){
-        case '/':
-            loadPage(req,res,'/client/game.html');
-            break;
-        case '/question_pool.js':
-            loadPage(req,res,'/client/'+path);
-            break;
-        case '/next':
-            triggerNextQuestion(req,res);
-            res.writeHead(200);
-            res.end('Request Completed');
-            break;
-        default:
-            loadPage(req,res,'/client/'+path);
-            break;
-    }
-}
+// creating a new websocket to keep the content updated without any AJAX request
+io.sockets.on('connection', function(socket) {
 
-send404 = function(res){
-    res.writeHead(404);
-    res.write('404');
-    res.end();
-};
+    console.log(__dirname);
+    socketGlobal= socket;
 
-function loadPage (req,res, file){
-       fs.readFile(__dirname + file, function(err, data) {
-           if (err){
-                 console.log(err);
-                 res.writeHead(500);
-
-                 return res.end('Error loading client.html');
-           }
-                res.writeHead(200);
-                res.end(data);
-           });
-}
+    socket.on('reset', function(data){
+            console.log('reset the session');
+    });
+});
 
 function triggerNextQuestion (req,res){
     console.log('next call');
@@ -64,14 +41,3 @@ function triggerNextQuestion (req,res){
         socketGlobal.volatile.emit('notification', json);
     });
 }
-
-// creating a new websocket to keep the content updated without any AJAX request
-io.sockets.on('connection', function(socket) {
-
-    console.log(__dirname);
-    socketGlobal= socket;
-
-    socket.on('reset', function(data){
-            console.log('reset the session');
-    });
-});

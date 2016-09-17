@@ -7,7 +7,7 @@ var io = require('socket.io').listen(server);
 var parser = new require('xml2json');
 var fs = require('fs');
 
-var gs = require('./gameServer.js');
+var gs = require('./server/gameServer.js');
 
 app.use(express.static('client'));
 
@@ -18,7 +18,6 @@ console.log('server listening on localhost:8000');
 
 app.get('/next', function (req, res) {
     triggerNextQuestion();
-    gs.foo();
     res.send('Request Completed');
 });
 

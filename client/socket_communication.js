@@ -10,6 +10,7 @@
         $('#question').html(_data.question);
         $('#optionA').html(_data.options[0]);
         $('#optionB').html(_data.options[1]);
+        $('#score').html("");
         <!--$('time').html('Last Update:' + new Date());-->
     });
 

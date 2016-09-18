@@ -17,15 +17,12 @@ server.listen(8000);
 console.log('server listening on localhost:8000');
 
 app.get('/startGame', function (req, res) {
+    console.log("inside startGame ");
+
     gs.startGame();
     triggerNextAction();
     var curQuestion = gs.getCurrentQuestion();
     res.send('Request Completed '+ curQuestion);
-});
-
-app.get('/next', function (req, res) {
-    triggerNextAction();
-    res.send('Request Completed');
 });
 
 app.get('/submitAnswer', function (req, res) {
@@ -50,7 +47,7 @@ function triggerNextAction (req,res){
     console.log('next call');
     var next = gs.triggerNextAction();
     var jsonNext = JSON.stringify(next);
-
+    console.log("json Next "+jsonNext);
     if(next != undefined){
         socketGlobal.volatile.emit('notification', jsonNext);
     } else{

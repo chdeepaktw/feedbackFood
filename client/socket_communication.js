@@ -33,7 +33,3 @@
         $('#container').html(data);
         $('time').html('Last Update:' + new Date());
     });
-
-    function reset(){
-          socket.emit('reset', {'call': 'reset'});
-    }

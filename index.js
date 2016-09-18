@@ -16,14 +16,22 @@ var socketGlobal;
 server.listen(8000);
 console.log('server listening on localhost:8000');
 
+app.get('/startGame', function (req, res) {
+    gs.startGame();
+    triggerNextAction();
+    var curQuestion = gs.getCurrentQuestion();
+    res.send('Request Completed '+ curQuestion);
+});
+
 app.get('/next', function (req, res) {
-    triggerNextQuestion();
+    triggerNextAction();
     res.send('Request Completed');
 });
 
 app.get('/submitAnswer', function (req, res) {
-    gs.submitAnswer();
-    gs.loadQuestions();
+    var answer = req.param('optionId');
+    gs.submitAnswer(answer);
+    triggerNextAction();
     res.send('Request Completed');
 });
 
@@ -38,14 +46,16 @@ io.sockets.on('connection', function(socket) {
     });
 });
 
-function triggerNextQuestion (req,res){
+function triggerNextAction (req,res){
     console.log('next call');
-    fs.readFile(__dirname + '/example.xml', function(err, data) {
-          if (err) throw err;
-        // parsing the new xml data and converting them into json file
-        var json = parser.toJson(data);
-        console.log('data '+data);
-        // send the new data to the client
-        socketGlobal.volatile.emit('notification', json);
-    });
+    var next = gs.triggerNextAction();
+    var jsonNext = JSON.stringify(next);
+
+    if(next != undefined){
+        socketGlobal.volatile.emit('notification', jsonNext);
+    } else{
+        var score = gs.endGame();
+        jsonNext = JSON.stringify(score);
+        socketGlobal.volatile.emit('end', jsonNext);
+    }
 }

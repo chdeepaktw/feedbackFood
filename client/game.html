@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>XD challenge !!</title>
-
 </head>
 <body onload="newSession(3)">
 
 <div id="questions">
 
-<input type="button"  value="New Session" onclick="newSession(3)">
 <input id="reset" type="button"  value="Reset" onclick="reset()">
 
 <h1>Question : </h1>
@@ -18,28 +16,15 @@
     <h3 id="optionA"></h3>
     <h3 id="optionB"></h3>
 
-<input type="button" value="True" onclick="doAnswer(1)">
-
-<input type="button" value="False" onclick="doAnswer(0)">
-
 
 </div>
 
 <h2 id="score"></h2>
 
-
-<script type="text/javascript" src="./question_pool.js" ></script>
-
-<script type="text/javascript" src="./session_manager.js" ></script>
-
-<script type="text/javascript" src="./game.js"></script>
-
 <script src="../socket.io/socket.io.js"></script>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 
-
 <script type="text/javascript" src="./socket_communication.js"></script>
-
 
 </body>
 </html>

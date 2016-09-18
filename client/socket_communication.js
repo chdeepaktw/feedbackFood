@@ -7,11 +7,24 @@
         var _data = JSON.parse(data);
         console.log(_data);
         $('#container').html("");
-        $('#question').html(_data.test.sample.question);
-        $('#optionA').html(_data.test.sample.optionA);
-        $('#optionB').html(_data.test.sample.optionB);
+        $('#question').html(_data.question);
+        $('#optionA').html(_data.options[0]);
+        $('#optionB').html(_data.options[1]);
         <!--$('time').html('Last Update:' + new Date());-->
     });
+
+    socket.on('end', function (data) {
+            // convert the json string into a valid javascript object
+            var _data = JSON.parse(data);
+            console.log(_data);
+                    $('#container').html("");
+            $('#score').html(_data);
+            $('#question').html("");
+            $('#optionA').html("");
+            $('#optionB').html("");
+            <!--$('time').html('Last Update:' + new Date());-->
+        });
+
 
     socket.on('next', function (data) {
         // convert the json string into a valid javascript object

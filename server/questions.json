@@ -18,5 +18,71 @@
     "question": "Who was the first designer recruited by ThoughtWorks ?",
     "options": ["Somya","Ruchi"],
     "answer": "Ruchi"
+  },
+
+  {
+    "qId": 4,
+    "question": "Who invented Design ?",
+    "options": ["Smith", "Bob"],
+    "answer": "Smith"
+  },
+
+  {
+    "qId": 5,
+    "question": "Who designed Facebook ?",
+    "options": ["Tom","Smith"],
+    "answer": "Smith"
+  },
+
+  {
+    "qId": 6,
+    "question": "Who was the first designer recruited by ThoughtWorks ?",
+    "options": ["Somya","Ruchi"],
+    "answer": "Ruchi"
+  },
+
+  {
+    "qId": 7,
+    "question": "Who invented Design ?",
+    "options": ["Smith", "Bob"],
+    "answer": "Smith"
+  },
+
+  {
+    "qId": 8,
+    "question": "Who designed Facebook ?",
+    "options": ["Tom","Smith"],
+    "answer": "Smith"
+  },
+
+  {
+    "qId": 9,
+    "question": "Who was the first designer recruited by ThoughtWorks ?",
+    "options": ["Somya","Ruchi"],
+    "answer": "Ruchi"
+  },
+
+  {
+    "qId": 10,
+    "question": "Who invented Design ?",
+    "options": ["Smith", "Bob"],
+    "answer": "Smith"
+  },
+
+  {
+    "qId": 11,
+    "question": "Who designed Facebook ?",
+    "options": ["Tom","Smith"],
+    "answer": "Smith"
+  },
+
+  {
+    "qId": 12,
+    "question": "Who was the first designer recruited by ThoughtWorks ?",
+    "options": ["Somya","Ruchi"],
+    "answer": "Ruchi"
   }
+
+
+
 ]

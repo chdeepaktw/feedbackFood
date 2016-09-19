@@ -49,7 +49,7 @@ module.exports = {
 var currentQuestionIndex;
 var questions;
 var score =0;
-var noOfQuestionForEachSession = 2
+var noOfQuestionForEachSession = 4
 
 var sessionQuestions = [];
 var maxQuestions;

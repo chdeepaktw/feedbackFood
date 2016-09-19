@@ -40,7 +40,9 @@ module.exports = {
 
   endGame: function () {
         currentQuestionIndex = undefined;
-        return score;
+        var tempScore = score;
+        score =0;
+        return tempScore;
   }
 };
 

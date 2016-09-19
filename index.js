@@ -4,8 +4,6 @@ var app = module.exports.app = express();
 var server = http.createServer(app);
 var io = require('socket.io').listen(server);
 
-var fs = require('fs');
-
 var gs = require('./server/gameServer.js');
 
 app.use(express.static('client'));

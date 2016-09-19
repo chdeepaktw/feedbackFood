@@ -14,7 +14,9 @@ module.exports = {
                     console.log("score = " +score);
               }
               setCurrentQuestionIndex();
-         }
+       } else{
+         module.exports.startGame();
+       }
 
   },
   getScore: function () {

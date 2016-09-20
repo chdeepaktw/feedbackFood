@@ -29,3 +29,7 @@ module.exports = {
       console.log('resume listening')
   }
 };
+
+setInterval(function() {
+    module.exports.listenButtonEvents();
+}, 5000);

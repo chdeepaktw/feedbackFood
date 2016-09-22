@@ -10,9 +10,8 @@ GPIO.setup(2, GPIO.OUT)
 GPIO.setup(12, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(26, GPIO.OUT)
 
-GPIO.output(2,GPIO.LOW)
-GPIO.output(26,GPIO.LOW)
-
+GPIO.output(2, GPIO.LOW)
+GPIO.output(26, GPIO.LOW)
 blink_time =0.8
 
 while True:

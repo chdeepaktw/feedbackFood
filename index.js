@@ -46,10 +46,18 @@ function triggerNextAction (req,res){
     var jsonNext = JSON.stringify(next);
     console.log("json Next "+jsonNext);
     if(next != undefined){
-        socketGlobal.volatile.emit('notification', jsonNext);
+        if(socketGlobal != undefined){
+            socketGlobal.volatile.emit('notification', jsonNext);
+        } else {
+            console.log("Open the web page for game http://localhost:8000");
+        }
     } else{
         var score = gs.endGame();
         jsonNext = JSON.stringify(score);
-        socketGlobal.volatile.emit('end', jsonNext);
+        if(socketGlobal != undefined) {
+            socketGlobal.volatile.emit('end', jsonNext);
+        } else {
+            console.log("Open the web page for game http://localhost:8000")
+        }
     }
 }

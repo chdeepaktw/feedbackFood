@@ -12,13 +12,16 @@ GPIO.setup(3, GPIO.OUT)
 
 GPIO.setup(17, GPIO.OUT)
 
+print('switching off pin 3')
+GPIO.output(3,GPIO.LOW)
+
 
 while True:
     input_state = GPIO.input(18)
     if input_state == False:
 		resp = requests.get('http://localhost:8000/submitAnswer/?optionId=0')
 		print('Button Pressed 0. Lighting LED')
-		GPIO.output(3, 3)
+		GPIO.output(3, GPIO.HIGH)
 		time.sleep(1)
 		print "LED off"
 		GPIO.output(3,GPIO.LOW)

@@ -12,7 +12,7 @@ GPIO.setup(26, GPIO.OUT)
 
 GPIO.output(2, GPIO.LOW)
 GPIO.output(26, GPIO.LOW)
-blink_time =0.8
+blink_time =0.4
 
 while True:
     input_state = GPIO.input(18)

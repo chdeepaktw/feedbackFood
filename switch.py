@@ -29,4 +29,4 @@ while True:
 		print('Button Pressed 1')
 		GPIO.output(26, GPIO.HIGH)
 		time.sleep(blink_time)
-        GPIO.output(26, GPIO.LOW)
+		GPIO.output(26, GPIO.LOW)

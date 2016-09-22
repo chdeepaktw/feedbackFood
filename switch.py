@@ -21,12 +21,13 @@ while True:
 		print('Button Pressed 0. Lighting LED')
 		GPIO.output(2, GPIO.HIGH)
 		time.sleep(blink_time)
-		print "LED off"
+		print "LED off 0"
 		GPIO.output(2,GPIO.LOW)
     input_state_2 = GPIO.input(12)
     if input_state_2 == False:
 		resp_2 = requests.get('http://localhost:8000/submitAnswer/?optionId=1')
-		print('Button Pressed 1')
+		print('Button Pressed 1. Lighting LED')
 		GPIO.output(26, GPIO.HIGH)
 		time.sleep(blink_time)
+		print "LED off 1"
 		GPIO.output(26, GPIO.LOW)

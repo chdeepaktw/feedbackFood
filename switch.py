@@ -13,7 +13,7 @@ GPIO.setup(2, GPIO.OUT)
 GPIO.setup(17, GPIO.OUT)
 
 print('switching off pin 3')
-GPIO.output(3,GPIO.LOW)
+GPIO.output(2,GPIO.LOW)
 
 
 while True:

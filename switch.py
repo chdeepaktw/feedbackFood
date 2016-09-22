@@ -20,6 +20,8 @@ while True:
 		print('Button Pressed 0. Lighting LED')
 		GPIO.output(3, 3)
 		time.sleep(1)
+		print "LED off"
+		GPIO.output(18,GPIO.LOW)
     input_state_2 = GPIO.input(12)
     if input_state_2 == False:
 		resp_2 = requests.get('http://localhost:8000/submitAnswer/?optionId=1')

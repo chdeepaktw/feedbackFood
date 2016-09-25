@@ -1,4 +1,4 @@
-    function startGame(){
+function startGame(){
 
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "http://localhost:8000/startGame", false);
@@ -7,7 +7,7 @@
     console.log(xhr.status);
     console.log(xhr.statusText);
 
-    }
+}
 
 function sendAnswer (option){
  var xhr = new XMLHttpRequest();

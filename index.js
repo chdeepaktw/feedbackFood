@@ -13,6 +13,10 @@ var socketGlobal;
 server.listen(8000);
 console.log('server listening on localhost:8000');
 
+app.get('/', function(req, res){
+    res.sendfile('/client/game.html', { root: __dirname  } );
+});
+
 app.get('/startGame', function (req, res) {
     console.log("inside startGame ");
 

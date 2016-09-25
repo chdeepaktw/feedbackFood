@@ -1,9 +1,9 @@
 [
   {
-    "qId": 1,
-    "question": " 1 Who invented Design ?",
-    "options": ["Smith", "Bob"],
-    "answer": "Smith"
+  "qId": 1,
+  "question": " 1 Who invented Design ?",
+  "options": ["Smith", "Bob"],
+  "answer": "Smith"
   },
 
   {

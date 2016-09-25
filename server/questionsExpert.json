@@ -67,21 +67,6 @@
     "question": "10 Who invented Design ?",
     "options": ["Smith", "Bob"],
     "answer": "Smith"
-  },
-
-  {
-    "qId": 11,
-    "question": " 11 Who designed Facebook ?",
-    "options": ["Tom","Smith"],
-    "answer": "Smith"
-  },
-  {
-    "qId": 12,
-    "question": "12 Who was the first designer recruited by ThoughtWorks ?",
-    "options": [
-      "Somya",
-      "Ruchi"
-    ],
-    "answer": "Ruchi"
   }
+
 ]

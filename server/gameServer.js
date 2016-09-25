@@ -52,8 +52,6 @@ module.exports = {
   }
 };
 
-var currentQuestionIndex;
-var questions;
 var questionsBeginner;
 var questionsImmediate;
 var questionsExpert;
@@ -61,7 +59,6 @@ var questionsExpert;
 var score = 2;
 var noOfQuestionForEachSession = 4
 
-var sessionQuestions = [];
 var sessionQuestionsBeginner = [];
 var sessionQuestionsImmediate = [];
 var sessionQuestionsExpert = [];
@@ -77,73 +74,8 @@ var randomInt = function (min, max) {
 var loadQuestions = function () {
     questions = require('./questions.json');
     questionsBeginner = require('./questionsBeginner.json');
-//    maxQuestionsBeginner = questionsBeginner.length;
     questionsImmediate = require('./questionsImmediate.json');
-//    maxQuestionsImmediate = questionsImmediate.length;
     questionsExpert = require('./questionsExpert.json');
-//    maxQuestionsExpert = questionsExpert.length;
-
-        console.log('load 0 '+ maxQuestionsBeginner)
-        console.log('load 1 '+ maxQuestionsImmediate)
-        console.log('load 2 '+ maxQuestionsExpert)
-//
-//    setQuestions(0);
-//    console.log('set 0')
-//    setQuestions(1);
-//    console.log('set 1')
-//
-//    setQuestions(2);
-//        console.log('set '+ sessionQuestionsBeginner);
-//        console.log('set '+ sessionQuestionsImmediate);
-//        console.log('set '+ sessionQuestionsExpert);
-
-}
-
-var setQuestions = function (level) {
-    var q;
-    switch(level) {
-        case 0:
-            sessionQuestionsBeginner =[];
-            console.log('0 load -1 ');
-            q = randomInt(0,questionsBeginner.length );
-            console.log('0 load -2 ' + q);
-
-            while(sessionQuestionsBeginner.length == undefined || sessionQuestionsBeginner.length <= maxQuestionsBeginner -1 ){
-               console.log('0 load -3 ');
-
-               if(sessionQuestionsBeginner.indexOf(q) == -1){
-                    sessionQuestionsBeginner.push(q);
-               }
-               console.log('0 load -4 ' +sessionQuestionsBeginner.length);
-
-               q = randomInt(0,questionsBeginner.length );
-               console.log('0 load - 5  '+q);
-
-            }
-            break;
-        case 1:
-            sessionQuestionsImmediate =[];
-            q = randomInt(0,questionsImmediate.length);
-            while(sessionQuestionsImmediate.length == undefined || sessionQuestionsImmediate.length <= maxQuestionsImmediate){
-               if(sessionQuestionsImmediate.indexOf(q) == -1){
-                    sessionQuestionsImmediate.push(q);
-               }
-               q = randomInt(0,questionsImmediate.length);
-            }
-            break;
-        case 2:
-            sessionQuestionsExpert =[];
-            q = randomInt(0,questionsExpert.length);
-            while(sessionQuestionsExpert.length == undefined || sessionQuestionsExpert.length <= maxQuestionsExpert){
-               if(sessionQuestionsExpert.indexOf(q) == -1){
-                    sessionQuestionsExpert.push(q);
-               }
-               q = randomInt(0,questionsExpert.length);
-            }
-            break;
-        default:
-            console.log('No level');
-    }
 }
 var curQuestion;
 var totalQuestionNumber;

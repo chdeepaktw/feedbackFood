@@ -21,6 +21,26 @@
 
     });
 
+ socket.on('gyan', function (data) {
+        // convert the json string into a valid javascript object
+        var _data = JSON.parse(data);
+        console.log(_data);
+//        $('#question').html(_data.question);
+        document.getElementById("optionAIcon").style.visibility = "hidden";
+
+        $('#optionA').html(_data);
+        document.getElementById("optionBIcon").style.visibility = "hidden";
+
+//        $('#optionB').html(_data.options[1]);
+        $('#score').html(_data.score);
+        <!--$('time').html('Last Update:' + new Date());-->
+
+//        setLevel(_data.score);
+//        countdown();
+
+    });
+
+
     socket.on('end', function (data) {
             // convert the json string into a valid javascript object
             var _data = JSON.parse(data);
@@ -41,29 +61,40 @@ var setLevel = function (score){
     console.log('score '+ score);
     switch (score){
         case 0:
+            document.getElementById("state-image").src='./images/state-00.png';
             break;
         case 1:
             document.getElementById("state-image").src='./images/state-01.png';
             break;
         case 2:
+            document.getElementById("state-image").src='./images/state-02.png';
             break;
         case 3:
+            document.getElementById("state-image").src='./images/state-03.png';
             break;
         case 4:
+            document.getElementById("state-image").src='./images/state-04.png';
             break;
         case 5:
+            document.getElementById("state-image").src='./images/state-05.png';
             break;
         case 6:
+            document.getElementById("state-image").src='./images/state-06.png';
             break;
         case 7:
+            document.getElementById("state-image").src='./images/state-07.png';
             break;
         case 8:
+            document.getElementById("state-image").src='./images/state-08.png';
             break;
         case 9:
+            document.getElementById("state-image").src='./images/state-09.png';
             break;
         case 10:
+            document.getElementById("state-image").src='./images/state-10.png';
             break;
         default:
+            document.getElementById("state-image").src='./images/state-00.png';
             break;
     }
 }

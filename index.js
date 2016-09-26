@@ -15,12 +15,14 @@ console.log('server listening on localhost:8000');
 
 app.get('/', function(req, res){
     res.sendfile('/client/game.html', { root: __dirname  } );
+    gs.loadQuestions();
 });
 
 app.get('/startGame', function (req, res) {
     console.log("inside startGame ");
-
+    gs.loadQuestions();
     gs.startGame();
+    gs.setCurrentQuestion();
     triggerNextAction();
     var curQuestion = gs.getCurrentQuestion();
     res.send('Request Completed '+ curQuestion);
@@ -28,13 +30,28 @@ app.get('/startGame', function (req, res) {
 
 app.get('/submitAnswer', function (req, res) {
     var answer = req.param('optionId');
-    gs.submitAnswer(answer);
+    var isCorrect = gs.submitAnswer(answer);
+    if(isCorrect === true){
+        gs.setCurrentQuestion();
+    } else if(isCorrect == false){
+        var curQuestion = gs.getCurrentQuestion();
+
+    var jsonNext = JSON.stringify(curQuestion.qId);
+        socketGlobal.volatile.emit('gyan', jsonNext);
+        setTimeout(function(){
+            gs.setCurrentQuestion();
+    }, 4000);
+    } else {
+        gs.startGame();
+        gs.setCurrentQuestion();
+    }
     triggerNextAction();
     res.send('Request Completed');
 });
 
 app.get('/timeUp', function (req, res) {
     gs.timeUp();
+    gs.setCurrentQuestion();
     triggerNextAction();
     res.send('Request Completed');
 });

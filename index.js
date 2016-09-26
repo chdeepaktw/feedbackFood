@@ -33,6 +33,12 @@ app.get('/submitAnswer', function (req, res) {
     res.send('Request Completed');
 });
 
+app.get('/timeUp', function (req, res) {
+    gs.timeUp();
+    triggerNextAction();
+    res.send('Request Completed');
+});
+
 // creating a new websocket to keep the content updated without any AJAX request
 io.sockets.on('connection', function(socket) {
 

@@ -19,6 +19,17 @@ module.exports = {
          module.exports.startGame();
        }
   },
+  timeUp: function (answerGiven) {
+    if(curQuestion != undefined){
+        // total number of question check here
+        score = score-1;
+        console.log("score = " +score);
+        setCurrentQuestionIndex();
+       } else{
+         module.exports.startGame();
+       }
+  },
+
   getScore: function () {
     return score;
   },

@@ -13,6 +13,11 @@
     	font-size : 72px;
     	color : #C69E3C;
     	color : rgb(198, 158, 60);
+
+width: 50%;
+position: relative;
+right: 0px;
+
 }
 
 #optionB
@@ -28,8 +33,6 @@
 {
 height: 20%;
 align: top;
-border-style: solid;
-border-width: 5px;
 }
 
 #leftContainer
@@ -38,9 +41,6 @@ height:80%
 width: 50%;
 position: absolute;
 left: 0px;
-border-style: solid;
-border-width: 3px;
-border-color: green;
 }
 
 #rightContainer
@@ -50,7 +50,41 @@ width: 50%;
 position: absolute;
 right: 0px;
 float: right;
-border-style: solid;
-border-width: 3px;
-border-color: yellow;
+}
+
+#optionAIcon
+{
+    visibility: hidden;
+    width: 50%;
+    position: relative;
+    left: 0px;
+    float: left;
+
+}
+
+
+#optionBIcon
+{
+    visibility: hidden;
+      width: 50%;
+        position: relative;
+        left: 0px;
+        float: left;
+}
+
+#optionAFull {
+
+width:50%;
+float: left;
+}
+
+#countdown {
+float: bottom;
+left: 50%;
+}
+
+#container {
+ position: relative;
+    left: 0px;
+    float: top;
 }

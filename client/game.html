@@ -6,23 +6,33 @@
 </head>
 <body>
 
-<div id="questions">
+<div id="container">
+    <div id="topMargin">
+    </div>
+    <div id="leftContainer">
+        <div id="question">
+        </div>
+        <div id="optionA">
+        </div>
+        <div id="optionB">
+        </div>
+        <div id="score">
+        </div>
+        </div>
+    <div id ="rightContainer">
 
-<h1>Question : </h1>
-<h2 id="question"></h2>
-
-    <h3 id="optionA"></h3>
-    <h3 id="optionB"></h3>
-
-
+            <img id="state-image" src="" width="400px" height="600px" alt="">
+    </div>
 </div>
 
-<h2 id="score"></h2>
+
 
 <script src="../socket.io/socket.io.js"></script>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 
 <script type="text/javascript" src="./socket_communication.js"></script>
+
+<link rel="stylesheet" href="./game.css">
 
 </body>
 </html>

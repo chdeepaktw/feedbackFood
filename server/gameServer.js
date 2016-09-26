@@ -23,19 +23,17 @@ module.exports = {
     return score;
   },
   getCurrentQuestion: function(){
-     if(currentQuestionIndex == undefined){
+     if(curQuestion == undefined){
             return "";
-        } else if (currentQuestionIndex  < noOfQuestionForEachSession){
-            return questions[currentQuestionIndex].question;
         } else {
-            console.log("not defined");
-     }
+            return curQuestion;
+        }
   },
   triggerNextAction: function(){
-  console.log('totalQuestionNumber '+ totalQuestionNumber);
-    if(totalQuestionNumber >= 10 || score == 10 || score <0){
+     console.log('totalQuestionNumber '+ totalQuestionNumber);
+    if(totalQuestionNumber > 10 || score == 10 || score < 0){
         return undefined;
-    } else if( totalQuestionNumber < 10)
+    } else if( totalQuestionNumber <= 10)
     {
         var newCur = curQuestion;
         newCur.score = score
@@ -46,26 +44,34 @@ module.exports = {
 
   endGame: function () {
         currentQuestionIndex = undefined;
+        sessionQuestionsBeginner = [];
+        sessionQuestionsIntermediate =[];
+        sessionQuestionsExpert =[];
+        totalQuestionNumber =2;
+        curQuestion = undefined;
         var tempScore = score;
-        score =0;
+        score = 2;
         return tempScore;
   }
 };
 
 var questionsBeginner;
-var questionsImmediate;
+var questionsIntermediate;
 var questionsExpert;
 
 var score = 2;
 var noOfQuestionForEachSession = 4
 
 var sessionQuestionsBeginner = [];
-var sessionQuestionsImmediate = [];
+var sessionQuestionsIntermediate = [];
 var sessionQuestionsExpert = [];
 
 var maxQuestionsBeginner = 3;
-var maxQuestionsImmediate = 3;
+var maxQuestionsIntermediate = 3;
 var maxQuestionsExpert = 3;
+
+var curQuestion;
+var totalQuestionNumber;
 
 var randomInt = function (min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
@@ -74,11 +80,9 @@ var randomInt = function (min, max) {
 var loadQuestions = function () {
     questions = require('./questions.json');
     questionsBeginner = require('./questionsBeginner.json');
-    questionsImmediate = require('./questionsImmediate.json');
+    questionsIntermediate = require('./questionsIntermediate.json');
     questionsExpert = require('./questionsExpert.json');
 }
-var curQuestion;
-var totalQuestionNumber;
 
 var setCurrentQuestionIndex = function(){
     var q;
@@ -88,29 +92,38 @@ var setCurrentQuestionIndex = function(){
         case 0 :
             q = randomInt(0,questionsBeginner.length);
             while(sessionQuestionsBeginner.indexOf(q) != -1){
+             console.log('level 0 q'+q+ '  current sessionQuestionsBeginer == '+ sessionQuestionsBeginner);
                 q = randomInt(0,questionsBeginner.length);
             }
             sessionQuestionsBeginner.push(q);
             curQuestion = questionsBeginner[q];
             totalQuestionNumber=totalQuestionNumber+1;
+            console.log(' pushed. current question is '+ curQuestion + " total questions "+ totalQuestionNumber);
+
             break;
         case 1 :
-            q = randomInt(0,questionsImmediate.length);
-            while(sessionQuestionsImmediate.indexOf(q) != -1){
-                q = randomInt(0,questionsImmediate.length);
+            q = randomInt(0,questionsIntermediate.length);
+            while(sessionQuestionsIntermediate.indexOf(q) != -1){
+             console.log('level 1 q'+q+ '  current sessionQuestionsIntermediate == '+ sessionQuestionsIntermediate);
+                q = randomInt(0,questionsIntermediate.length);
             }
-            sessionQuestionsImmediate.push(q);
-            curQuestion = questionsImmediate[q];
+            sessionQuestionsIntermediate.push(q);
+            curQuestion = questionsIntermediate[q];
             totalQuestionNumber=totalQuestionNumber+1;
+            console.log(' pushed. current question is '+ curQuestion + " total questions "+ totalQuestionNumber);
+
             break;
         case 2 :
             q = randomInt(0,questionsExpert.length);
             while(sessionQuestionsExpert.indexOf(q) != -1){
+                console.log('level 2 q'+q + '  current sessionQuestionsexpert == '+ sessionQuestionsExpert);
                 q = randomInt(0,questionsExpert.length);
             }
             sessionQuestionsExpert.push(q);
             curQuestion = questionsExpert[q];
             totalQuestionNumber=totalQuestionNumber+1;
+            console.log(' pushed. current question is '+ curQuestion + " total questions "+ totalQuestionNumber);
+
             break;
     }
 }

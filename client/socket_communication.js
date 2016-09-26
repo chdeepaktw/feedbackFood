@@ -6,19 +6,21 @@
         // convert the json string into a valid javascript object
         var _data = JSON.parse(data);
         console.log(_data);
-        $('#container').html("");
         $('#question').html(_data.question);
         $('#optionA').html(_data.options[0]);
         $('#optionB').html(_data.options[1]);
-        $('#score').html("");
+        $('#score').html(_data.score);
         <!--$('time').html('Last Update:' + new Date());-->
+
+        setLevel(_data.score);
+
+
     });
 
     socket.on('end', function (data) {
             // convert the json string into a valid javascript object
             var _data = JSON.parse(data);
             console.log(_data);
-                    $('#container').html("");
             $('#score').html(_data);
             $('#question').html("");
             $('#optionA').html("");
@@ -27,10 +29,33 @@
         });
 
 
-    socket.on('next', function (data) {
-        // convert the json string into a valid javascript object
-
-        console.log(data);
-        $('#container').html(data);
-        $('time').html('Last Update:' + new Date());
-    });
+var setLevel = function (score){
+console.log('score '+ score);
+switch (score){
+    case 0:
+        break;
+    case 1:
+        document.getElementById("state-image").src='./images/state-01.png';
+        break;
+    case 2:
+        break;
+    case 3:
+        break;
+    case 4:
+        break;
+    case 5:
+        break;
+    case 6:
+        break;
+    case 7:
+        break;
+    case 8:
+        break;
+    case 9:
+        break;
+    case 10:
+        break;
+    default:
+        break;
+}
+}

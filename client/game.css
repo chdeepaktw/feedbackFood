@@ -1,0 +1,56 @@
+#question
+{
+	font-family : PT Sans Narrow;
+	font-weight : bold;
+	font-size : 72px;
+	color : #4C4C4C;
+	color : rgb(76, 76, 76);
+}
+#optionA
+{
+	font-family : PT Sans Narrow;
+    	font-weight : bold;
+    	font-size : 72px;
+    	color : #C69E3C;
+    	color : rgb(198, 158, 60);
+}
+
+#optionB
+{
+	font-family : PT Sans Narrow;
+    	font-weight : bold;
+    	font-size : 72px;
+    	color : #2443A8;
+    	color : rgb(36, 67, 168);
+}
+
+#topMargin
+{
+height: 20%;
+align: top;
+border-style: solid;
+border-width: 5px;
+}
+
+#leftContainer
+{
+height:80%
+width: 50%;
+position: absolute;
+left: 0px;
+border-style: solid;
+border-width: 3px;
+border-color: green;
+}
+
+#rightContainer
+{
+height:80%
+width: 50%;
+position: absolute;
+right: 0px;
+float: right;
+border-style: solid;
+border-width: 3px;
+border-color: yellow;
+}

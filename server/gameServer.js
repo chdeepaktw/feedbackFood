@@ -49,7 +49,8 @@ module.exports = {
     } else if( totalQuestionNumber <= 10)
     {
         var newCur = curQuestion;
-        newCur.score = score
+        newCur.score = score;
+        newCur.questionCount = totalQuestionNumber;
         return newCur;
     }
      return undefined;
@@ -60,7 +61,7 @@ module.exports = {
         sessionQuestionsBeginner = [];
         sessionQuestionsIntermediate =[];
         sessionQuestionsExpert =[];
-        totalQuestionNumber =2;
+        totalQuestionNumber = 0;
         curQuestion = undefined;
         var tempScore = score;
         score = 2;
@@ -118,7 +119,6 @@ var questionsIntermediate;
 var questionsExpert;
 
 var score = 2;
-var noOfQuestionForEachSession = 4
 
 var sessionQuestionsBeginner = [];
 var sessionQuestionsIntermediate = [];

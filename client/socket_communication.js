@@ -13,7 +13,7 @@
         document.getElementById("optionBIcon").style.visibility = "visible";
 
         $('#optionB').html(_data.options[1]);
-        $('#score').html(_data.score);
+//        $('#score').html(_data.score);
         <!--$('time').html('Last Update:' + new Date());-->
 
         setLevel(_data.score);

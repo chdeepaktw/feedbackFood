@@ -3,7 +3,6 @@ module.exports = {
     totalQuestionNumber =0;
   },
 
-
  loadQuestions: function () {
     questions = require('./questions.json');
     questionsBeginner = require('./questionsBeginner.json');
@@ -12,8 +11,6 @@ module.exports = {
  },
 
   submitAnswer: function (answerGiven) {
-
-    console.log('answer submitted ' + answerGiven);
      if(curQuestion != undefined){
         var isCorrect = false;
         if( curQuestion.options[answerGiven] === curQuestion.answer){
@@ -22,7 +19,6 @@ module.exports = {
            } else {
                 score = score-1;
            }
-         console.log("score = " +score);
          return isCorrect;
        } else{
          return undefined;
@@ -31,13 +27,14 @@ module.exports = {
   timeUp: function (answerGiven) {
     if(curQuestion != undefined){
         score = score-1;
-        console.log("score = " +score);
     }
+    return false;
   },
 
   getScore: function () {
     return score;
   },
+
   getCurrentQuestion: function(){
      if(curQuestion == undefined){
             return "";
@@ -45,8 +42,8 @@ module.exports = {
             return curQuestion;
         }
   },
+
   triggerNextAction: function(){
-     console.log('totalQuestionNumber '+ totalQuestionNumber);
     if(totalQuestionNumber > 10 || score == 10 || score < 0){
         return undefined;
     } else if( totalQuestionNumber <= 10)
@@ -77,55 +74,43 @@ module.exports = {
     switch (level){
         case 0 :
             if(questionsBeginner == undefined){
-            module.exports.loadQuestions();
+                module.exports.loadQuestions();
             }
             q = randomInt(0,questionsBeginner.length);
             while(sessionQuestionsBeginner.indexOf(q) != -1){
-             console.log('level 0 q'+q+ '  current sessionQuestionsBeginer == '+ sessionQuestionsBeginner);
                 q = randomInt(0,questionsBeginner.length);
             }
             sessionQuestionsBeginner.push(q);
             curQuestion = questionsBeginner[q];
             totalQuestionNumber=totalQuestionNumber+1;
-            console.log(' pushed. current question is '+ curQuestion + " total questions "+ totalQuestionNumber);
-
             break;
         case 1 :
-
-            if(questionsIntermediate == undefined){
-            module.exports.loadQuestions();
+           if(questionsIntermediate == undefined){
+                module.exports.loadQuestions();
             }
             q = randomInt(0,questionsIntermediate.length);
             while(sessionQuestionsIntermediate.indexOf(q) != -1){
-             console.log('level 1 q'+q+ '  current sessionQuestionsIntermediate == '+ sessionQuestionsIntermediate);
                 q = randomInt(0,questionsIntermediate.length);
             }
             sessionQuestionsIntermediate.push(q);
             curQuestion = questionsIntermediate[q];
             totalQuestionNumber=totalQuestionNumber+1;
-            console.log(' pushed. current question is '+ curQuestion + " total questions "+ totalQuestionNumber);
-
             break;
         case 2 :
-
             if(questionsExpert == undefined){
-            module.exports.loadQuestions();
+                module.exports.loadQuestions();
             }
             q = randomInt(0,questionsExpert.length);
             while(sessionQuestionsExpert.indexOf(q) != -1){
-                console.log('level 2 q'+q + '  current sessionQuestionsexpert == '+ sessionQuestionsExpert);
                 q = randomInt(0,questionsExpert.length);
             }
             sessionQuestionsExpert.push(q);
             curQuestion = questionsExpert[q];
             totalQuestionNumber=totalQuestionNumber+1;
-            console.log(' pushed. current question is '+ curQuestion + " total questions "+ totalQuestionNumber);
 
             break;
     }
 }
-
-
 };
 
 var questionsBeginner;

@@ -1,0 +1,107 @@
+#fullPage {
+
+ display: flex;
+ flex-flow: column;
+}
+
+#countdown {
+    float: bottom;
+    left: 50%;
+    width: 150px;
+    position: absolute;
+}
+
+#topMargin {
+    height: 20%;
+    align: top;
+
+     display: flex;
+     flex-flow: column;
+}
+
+
+
+#container {
+    top: 20%;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+ display: flex;
+ flex-flow: column;
+}
+
+#question
+{
+	font-family : PT Sans Narrow;
+	font-weight : bold;
+	font-size : 72px;
+	color : #4C4C4C;
+	color : rgb(76, 76, 76);
+}
+#optionA
+{
+	font-family : PT Sans Narrow;
+    	font-weight : bold;
+    	font-size : 72px;
+    	color : #C69E3C;
+    	color : rgb(198, 158, 60);
+
+width: 50%;
+position: relative;
+right: 0px;
+
+}
+
+#optionB
+{
+	font-family : PT Sans Narrow;
+    	font-weight : bold;
+    	font-size : 72px;
+    	color : #2443A8;
+    	color : rgb(36, 67, 168);
+}
+
+
+
+#leftContainer
+{
+height:80%
+width: 50%;
+position: absolute;
+left: 0px;
+}
+
+#rightContainer
+{
+height:80%
+width: 50%;
+position: absolute;
+right: 0px;
+float: right;
+}
+
+#optionAIcon
+{
+    visibility: hidden;
+    width: 50%;
+    position: relative;
+    left: 0px;
+    float: left;
+
+}
+
+
+#optionBIcon
+{
+    visibility: hidden;
+      width: 50%;
+        position: relative;
+        left: 0px;
+        float: left;
+}
+
+#optionAFull {
+
+width:50%;
+float: left;
+}

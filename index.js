@@ -34,7 +34,12 @@ app.get('/submitAnswer', function (req, res) {
     console.log('Answer submitted for '+ gs.getCurrentQuestion().question +' Answer '+ answer +'  IsCorrect:  '+ isCorrect);
     if(isCorrect === true){
         console.log('Correct Answer. Moving to Next Question');
-        gs.setCurrentQuestion();
+        var gyan = "";
+        socketGlobal.volatile.emit('congratulations', gyan);
+        setTimeout(function(){
+            console.log('Congratulations Done. Moving to Next Question');
+            gs.setCurrentQuestion();
+        }, 4000);
     } else if(isCorrect == false){
         console.log('InCorrect Answer. Showing Gyan and then Moving to Next Question');
         var curQuestion = gs.getCurrentQuestion();
@@ -56,9 +61,14 @@ app.get('/submitAnswer', function (req, res) {
 app.get('/timeUp', function (req, res) {
     console.log('Time Up.');
     gs.timeUp();
-    console.log('Moving to Next Question.');
-    gs.setCurrentQuestion();
-    triggerNextAction();
+    var gyan ="timeup";
+    socketGlobal.volatile.emit('timeup', gyan);
+    setTimeout(function(){
+        console.log('Moving to Next Question.');
+        gs.setCurrentQuestion();
+        triggerNextAction();
+    }, 4000);
+
     res.send('Request Completed');
 });
 

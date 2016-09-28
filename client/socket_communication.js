@@ -22,23 +22,26 @@
     });
 
  socket.on('gyan', function (data) {
-        // convert the json string into a valid javascript object
         var _data = JSON.parse(data);
         console.log(_data);
-//        $('#question').html(_data.question);
         document.getElementById("optionAIcon").style.visibility = "hidden";
 
-        $('#optionA').html(_data);
+        $('#gyan').html(_data);
         document.getElementById("optionBIcon").style.visibility = "hidden";
-
-//        $('#optionB').html(_data.options[1]);
-        $('#score').html(_data.score);
-        <!--$('time').html('Last Update:' + new Date());-->
-
-//        setLevel(_data.score);
-//        countdown();
-
     });
+
+
+ socket.on('congratulations', function (data) {
+        document.getElementById("optionAIcon").style.visibility = "hidden";
+        document.getElementById("optionBIcon").style.visibility = "hidden";
+        $('#congratulations').html("");
+ });
+
+ socket.on('timeup', function (data) {
+        document.getElementById("optionAIcon").style.visibility = "hidden";
+        document.getElementById("optionBIcon").style.visibility = "hidden";
+        $('#timeup').html(_data);
+ });
 
 
     socket.on('end', function (data) {

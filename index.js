@@ -34,7 +34,7 @@ app.get('/submitAnswer', function (req, res) {
     console.log('Answer submitted for '+ gs.getCurrentQuestion().question +' Answer '+ answer +'  IsCorrect:  '+ isCorrect);
     if(isCorrect === true){
         var player = require('play-sound')(opts = {})
-        player.play('correct.mp3', function(err){})
+        player.play('audio/correct.mp3', function(err){})
         console.log('Correct Answer. Moving to Next Question');
         var gyan = "";
         socketGlobal.volatile.emit('congratulations', gyan);
@@ -44,7 +44,7 @@ app.get('/submitAnswer', function (req, res) {
         }, 4000);
     } else if(isCorrect == false){
         var player = require('play-sound')(opts = {})
-        player.play('wrong.mp3', function(err){})
+        player.play('audio/wrong.mp3', function(err){})
         console.log('InCorrect Answer. Showing Gyan and then Moving to Next Question');
         var curQuestion = gs.getCurrentQuestion();
         var gyan = JSON.stringify(curQuestion.gyan);

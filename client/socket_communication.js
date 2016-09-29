@@ -14,6 +14,10 @@ socket.on('notification', function (data) {
   document.getElementById("optionBIcon").style.visibility = "visible";
 
   $('#optionB').html(_data.options[1]);
+  $('#currentQuestionNumber').html(_data.questionCount);
+
+
+
 //        $('#score').html(_data.score);
   <!--$('time').html('Last Update:' + new Date());-->
   document.getElementById("correctAnswerGyan").style.visibility = "hidden";
@@ -21,15 +25,7 @@ socket.on('notification', function (data) {
   document.getElementById("timeUpMessage").style.visibility = "hidden";
 
   setLevel(_data.score);
-  var timer = new Timer();
-  timer.start({precision: 'seconds', startValues: {seconds: 10}, countdown: true});
-  timer.addEventListener('secondsUpdated', function (e) {
-    $('#countdown').html(timer.getTimeValues().toString(['seconds']));
-  });
-  timer.addEventListener('targetAchieved', function (e) {
-    $("#options").hide();
-    document.getElementById("timeUpMessage").style.visibility = "visible";
-  });
+  setTimer();
 
 });
 
@@ -37,13 +33,15 @@ socket.on('gyan', function (data) {
   var _data = JSON.parse(data);
   console.log(_data);
   $("#options").hide();
-  $('#wrongAnswerGyan .gyan-message').html(_data);
+  $('#wrongAnswerGyan .gyan-message-wrong').show();
+  stopTimer();
 });
 
 
 socket.on('congratulations', function (data) {
   $("#options").hide();
-  $('#correctAnswerGyan .gyan-message').html("");
+  $('#correctAnswerGyan .gyan-message-correct').show();
+  stopTimer();
 });
 
 socket.on('end', function (data) {
@@ -83,3 +81,26 @@ var setLevel = function (score) {
       break;
   }
 };
+
+var timer ;
+var setTimer = function(){
+
+    $('#timer').show();
+ timer = new Timer();
+  timer.start({precision: 'seconds', startValues: {seconds: 10}, countdown: true});
+  timer.addEventListener('secondsUpdated', function (e) {
+    $('#countdown').html(timer.getTimeValues().toString(['seconds']));
+  });
+  timer.addEventListener('targetAchieved', function (e) {
+    $("#options").hide();
+    $.ajax({ url: "http://localhost:8000/timeUp"}).then(function(data) {
+     console.log('res'+ data);
+                         });
+    document.getElementById("timeUpMessage").style.visibility = "visible";
+  });
+}
+
+var stopTimer = function (){
+    timer.stop();
+    $('#timer').hide();
+}

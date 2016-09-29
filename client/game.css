@@ -86,6 +86,7 @@ p {
     position: absolute;
     width: 100%;
     bottom: 35% ;
+    visibility: hidden;
 }
 #wrongAnswerGyan, #timeUpMessage {
     background-color: rgb(221,38,99);

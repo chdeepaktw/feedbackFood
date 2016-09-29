@@ -74,16 +74,25 @@ module.exports = {
     console.log('level '+ level);
     switch (level){
         case 0 :
+            console.log('questionsBeginner '+ questionsBeginner);
             if(questionsBeginner == undefined){
                 module.exports.loadQuestions();
             }
             q = randomInt(0,questionsBeginner.length);
+            console.log('q '+ q);
+            console.log(' sessionQuestionsBeginner '+  sessionQuestionsBeginner);
             while(sessionQuestionsBeginner.indexOf(q) != -1){
                 q = randomInt(0,questionsBeginner.length);
             }
             sessionQuestionsBeginner.push(q);
+            console.log(' sessionQuestionsBeginner after'+  sessionQuestionsBeginner);
+
             curQuestion = questionsBeginner[q];
+            console.log(' curQuestion '+  curQuestion);
+
             totalQuestionNumber=totalQuestionNumber+1;
+            console.log(' totalQuesion '+  totalQuestionNumber);
+
             break;
         case 1 :
            if(questionsIntermediate == undefined){

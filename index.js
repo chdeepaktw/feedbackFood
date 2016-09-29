@@ -41,7 +41,9 @@ app.get('/submitAnswer', function (req, res) {
         setTimeout(function(){
             console.log('Congratulations Done. Moving to Next Question');
             gs.setCurrentQuestion();
-        }, 4000);
+            triggerNextAction();
+            res.send('Request Completed');
+        }, 2000);
     } else if(isCorrect == false){
         var player = require('play-sound')(opts = {})
         player.play('audio/wrong.mp3', function(err){})
@@ -52,14 +54,17 @@ app.get('/submitAnswer', function (req, res) {
         setTimeout(function(){
             console.log('Gyan Done. Moving to Next Question');
             gs.setCurrentQuestion();
-        }, 4000);
+            triggerNextAction();
+            res.send('Request Completed');
+        }, 2000);
     } else {
         console.log('Option Button Pressed without Question. Restarting Game');
         gs.startGame();
         gs.setCurrentQuestion();
+        triggerNextAction();
+        res.send('Request Completed');
     }
-    triggerNextAction();
-    res.send('Request Completed');
+
 });
 
 app.get('/timeUp', function (req, res) {
@@ -71,9 +76,10 @@ app.get('/timeUp', function (req, res) {
         console.log('Moving to Next Question.');
         gs.setCurrentQuestion();
         triggerNextAction();
-    }, 4000);
+        res.send('Request Completed');
+    }, 2000);
 
-    res.send('Request Completed');
+
 });
 
 // creating a new websocket to keep the content updated without any AJAX request
@@ -81,7 +87,7 @@ io.sockets.on('connection', function(socket) {
     console.log(__dirname);
     socketGlobal= socket;
     socket.on('reset', function(data){
-            console.log('reset the session');
+    console.log('reset the session');
     });
 });
 

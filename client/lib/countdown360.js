@@ -66,7 +66,7 @@
 
     start: function () {
       this.startedAt = new Date();
-      this._drawCountdownShape(Math.PI*3.5, true);
+      //this._drawCountdownShape(Math.PI*3.5, true);
       this._drawCountdownLabel(0);
       var timerInterval = 1000;
       if (this.settings.smooth) {

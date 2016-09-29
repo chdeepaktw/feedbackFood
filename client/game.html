@@ -5,14 +5,14 @@
   <title>XD challenge !!</title>
 </head>
 <body>
-<!--<div id="topMargin">-->
-<!--<div id="countdown"></div>-->
-<!--</div>-->
 <div id="leftSection">
   <div class="questionContainer">
     <p id="questionNumberContainer">
       <span id="currentQuestionNumber">8</span>
-      <span id="totalNumberOfQuestions"> of 10</span>
+      <span id="totalQuestionsText">
+        <span> of </span>
+        <span id="totalNumberOfQuestions">10</span>
+      </span>
     </p>
 
     <p id="question"></p>
@@ -27,13 +27,10 @@
       <div class="option">
         <div id="optionBIcon">
           <img class='buzzer' id="greenButton" src="images/green_buzzer.png">
-          <span id="optionB">Somya</span>
+          <span id="optionB"></span>
         </div>
       </div>
     </div>
-    <!--<div id="congratulations"></div>-->
-    <!--<div id="gyan"></div>-->
-    <!--<div id="timeup"></div>-->
   </div>
 </div>
 <div id="rightSection">
@@ -42,39 +39,41 @@
 
     <p class="timer">
       <span>TIME LEFT : </span>
-      <span id="countdown">10</span>
+      <span id="countdown"></span>
       <span> SEC</span>
     </p>
   </div>
 </div>
 <div id="score"></div>
-<!--<div id="correctAnswerGyan">-->
-<!--<div class="gyan">-->
-<!--<p class="gyan-title">Congratulations!</p>-->
-<!--<p class="gyan-message">Blah</p>-->
-<!--</div>-->
-<!--</div>-->
+<div id="correctAnswerGyan">
+  <div class="gyan">
+    <p class="gyan-title">Congratulations!</p>
 
-<!--<div id="wrongAnswerGyan">-->
-<!--<div class="gyan">-->
-<!--<p class="gyan-title">Uh, Oh!</p>-->
-<!--<p class="gyan-message">Blah</p>-->
-<!--</div>-->
-<!--</div>-->
+    <p class="gyan-message">Blah</p>
+  </div>
+</div>
 
-<!--<div id="timeUpMessage">-->
-<!--<div class="gyan">-->
-<!--<p class="gyan-title">Sorry! Your time is up.</p>-->
-<!--</div>-->
-<!--</div>-->
+<div id="wrongAnswerGyan">
+  <div class="gyan">
+    <p class="gyan-title">Uh, Oh!</p>
+
+    <p class="gyan-message">Blah</p>
+  </div>
+</div>
+
+<div id="timeUpMessage">
+  <div class="gyan">
+    <p class="gyan-title">Sorry! Your time is up.</p>
+  </div>
+</div>
 
 
 <script src="../socket.io/socket.io.js"></script>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 
+<script type="text/javascript" src="./lib/easytimer.js"></script>
 <script type="text/javascript" src="./socket_communication.js"></script>
 
-<script type="text/javascript" src="./lib/countdown360.js"></script>
 <link rel="stylesheet" href="./game.css">
 
 </body>

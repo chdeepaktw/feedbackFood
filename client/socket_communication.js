@@ -16,10 +16,6 @@ socket.on('notification', function (data) {
   $('#optionB').html(_data.options[1]);
   $('#currentQuestionNumber').html(_data.questionCount);
 
-
-
-//        $('#score').html(_data.score);
-  <!--$('time').html('Last Update:' + new Date());-->
   document.getElementById("correctAnswerGyan").style.visibility = "hidden";
   document.getElementById("wrongAnswerGyan").style.visibility = "hidden";
   document.getElementById("timeUpMessage").style.visibility = "hidden";
@@ -34,14 +30,15 @@ socket.on('gyan', function (data) {
   var _data = JSON.parse(data);
   console.log(_data);
   $("#options").hide();
-  $('#wrongAnswerGyan .gyan-message-wrong').show();
+      document.getElementById("wrongAnswerGyan").style.visibility = "visible";
 
 });
-
 
 socket.on('congratulations', function (data) {
   stopTimer();
   $("#options").hide();
+      document.getElementById("correctAnswerGyan").style.visibility = "visible";
+
   $('#correctAnswerGyan .gyan-message-correct').show();
 });
 

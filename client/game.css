@@ -38,25 +38,33 @@ p {
     float: left;
 }
 #rightSection {
-    width: 35%;
     float: right;
+    width: 30%;
+}
+.imageContainer {
     position: absolute;
-    right: 0;
     z-index: 1000;
+    bottom: 96px;
+    right: 115px;
 }
 .questionContainer {
-    padding: 60px;
-    padding-right: 40px;
+    padding-top: 180px;
+    padding-left: 180px;
+    /*padding-right: 40px;*/
 }
 .rightContainer {
-    padding: 60px 80px 60px 0;
+    padding-top: 180px;
+    padding-right: 180px;
 }
 #question {
     color: #fff;
-    font-size: 3.5em;
+    font-size: 75px;
     font-family: PT Sans Narrow;
     font-weight: bold;
     margin-bottom: 10%;
+    lin-height: 80px;
+    height: 400px;
+    margin: auto 0px;
 }
 #questionNumberContainer {
     margin-bottom: 3%;
@@ -91,7 +99,7 @@ p {
     color: #6b2669;
     background-color: rgb(255,228,28);
     margin-top: 5%;
-    font-size: 2.2em;
+    font-size: 40px;
     font-family: Shentox;
     font-weight: bold;
     padding: 5%;
@@ -101,7 +109,7 @@ p {
 #wrongAnswerGyan, #correctAnswerGyan, #timeUpMessage {
     position: absolute;
     width: 100%;
-    bottom: 15% ;
+    bottom: 12% ;
     visibility: hidden;
 }
 #wrongAnswerGyan, #timeUpMessage {
@@ -116,15 +124,18 @@ p {
 }
 .gyan {
     color: #fff;
-    margin: 20px 60px;
-    width: 60%;
+    margin-left: 180px;
+    margin-top: 30px;
+    width: 52%;
+    height: 240px;
 }
 .gyan-title {
-    font-size: 3em;
+    font-size: 75px;
     font-family: PT Sans Narrow;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 .gyan-message {
-    font-size: 1.5em;
+    font-size: 36px;
     font-family: PT Sans Narrow;
 }

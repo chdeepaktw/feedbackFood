@@ -30,18 +30,26 @@ socket.on('notification', function (data) {
 });
 
 socket.on('gyan', function (data) {
+  stopTimer();
   var _data = JSON.parse(data);
   console.log(_data);
   $("#options").hide();
   $('#wrongAnswerGyan .gyan-message-wrong').show();
-  stopTimer();
+
 });
 
 
 socket.on('congratulations', function (data) {
+  stopTimer();
   $("#options").hide();
   $('#correctAnswerGyan .gyan-message-correct').show();
+});
+
+socket.on('timeup', function (data) {
   stopTimer();
+  $("#options").hide();
+  $('#timeUpMessage').show();
+
 });
 
 socket.on('end', function (data) {

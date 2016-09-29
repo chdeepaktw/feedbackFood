@@ -30,16 +30,18 @@ socket.on('gyan', function (data) {
   var _data = JSON.parse(data);
   console.log(_data);
   $("#options").hide();
-      document.getElementById("wrongAnswerGyan").style.visibility = "visible";
+  $('#gyan-message-wrong').html(_data);
 
+  document.getElementById("wrongAnswerGyan").style.visibility = "visible";
 });
 
 socket.on('congratulations', function (data) {
   stopTimer();
+  var _data = JSON.parse(data);
+  console.log(_data);
   $("#options").hide();
-      document.getElementById("correctAnswerGyan").style.visibility = "visible";
-
-  $('#correctAnswerGyan .gyan-message-correct').show();
+  $('#gyan-message-correct').html(_data);
+  document.getElementById("correctAnswerGyan").style.visibility = "visible";
 });
 
 socket.on('timeup', function (data) {

@@ -36,7 +36,8 @@ app.get('/submitAnswer', function (req, res) {
         var player = require('play-sound')(opts = {})
         player.play('audio/correct.mp3', function(err){})
         console.log('Correct Answer. Moving to Next Question');
-        var gyan = "";
+        var curQuestion = gs.getCurrentQuestion();
+        var gyan = JSON.stringify(curQuestion.gyan);
         socketGlobal.volatile.emit('congratulations', gyan);
         setTimeout(function(){
             console.log('Congratulations Done. Moving to Next Question');

@@ -1,48 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>XD challenge !!</title>
+  <meta charset="UTF-8">
+  <title>XD challenge !!</title>
 </head>
 <body>
-<div id="body">
-    <div id="topMargin">
-        <div id="countdown"></div>
-    </div>
-    <div id="container">
-        <div id="leftContainer">
-            <div id="question">
-            </div>
-            <div id="Options">
-                <div id="optionAFull">
-                    <div id="optionAIcon">
-                        <img id="yellow-button" src="images/button_yellow.png" width="150px" height="150px" alt="">
-                    </div>
-                    <div id="optionA">
-                    </div>
-                </div>
-                <div id="optionBFull">
-                    <div id="optionBIcon">
-                        <img id="blue-button" src="images/button_blue.png" width="150px" height="150px" alt="">
-                    </div>
-                    <div id="optionB">
-                    </div>
-                </div>
-            </div>
-            <div id="congratulations">
-            </div>
-            <div id="gyan">
-            </div>
-            <div id="timeup">
-            </div>
+<!--<div id="topMargin">-->
+<!--<div id="countdown"></div>-->
+<!--</div>-->
+<div id="leftSection">
+  <div class="questionContainer">
+    <p id="questionNumberContainer">
+      <span id="currentQuestionNumber">8</span>
+      <span id="totalNumberOfQuestions"> of 10</span>
+    </p>
+
+    <p id="question"></p>
+
+    <div id="options">
+      <div class="option">
+        <div id="optionAIcon">
+          <img class='buzzer' id="yellowButton" src="images/yellow_buzzer.png">
+          <span id="optionA"></span>
         </div>
-        <div id ="rightContainer">
-            <img id="state-image" src="" width="400px" height="600px" alt="">
+      </div>
+      <div class="option">
+        <div id="optionBIcon">
+          <img class='buzzer' id="greenButton" src="images/green_buzzer.png">
+          <span id="optionB">Somya</span>
         </div>
+      </div>
     </div>
-    <div id="score">
-    </div>
+    <!--<div id="congratulations"></div>-->
+    <!--<div id="gyan"></div>-->
+    <!--<div id="timeup"></div>-->
+  </div>
 </div>
+<div id="rightSection">
+  <div class="rightContainer">
+    <img id="state-image" src="">
+
+    <p class="timer">
+      <span>TIME LEFT : </span>
+      <span id="countdown">10</span>
+      <span> SEC</span>
+    </p>
+  </div>
+</div>
+<div id="score"></div>
+<!--<div id="correctAnswerGyan">-->
+<!--<div class="gyan">-->
+<!--<p class="gyan-title">Congratulations!</p>-->
+<!--<p class="gyan-message">Blah</p>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<div id="wrongAnswerGyan">-->
+<!--<div class="gyan">-->
+<!--<p class="gyan-title">Uh, Oh!</p>-->
+<!--<p class="gyan-message">Blah</p>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<div id="timeUpMessage">-->
+<!--<div class="gyan">-->
+<!--<p class="gyan-title">Sorry! Your time is up.</p>-->
+<!--</div>-->
+<!--</div>-->
 
 
 <script src="../socket.io/socket.io.js"></script>

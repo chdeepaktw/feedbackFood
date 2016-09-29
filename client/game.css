@@ -101,7 +101,7 @@ p {
 #wrongAnswerGyan, #correctAnswerGyan, #timeUpMessage {
     position: absolute;
     width: 100%;
-    bottom: 35% ;
+    bottom: 15% ;
     visibility: hidden;
 }
 #wrongAnswerGyan, #timeUpMessage {

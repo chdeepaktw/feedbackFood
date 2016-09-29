@@ -58,8 +58,6 @@ socket.on('end', function (data) {
   $('#score').html(_data);
   $('#question').html("");
   $("#options").hide();
-
-  <!--$('time').html('Last Update:' + new Date());-->
 });
 
 
@@ -110,4 +108,14 @@ var setTimer = function(){
 var stopTimer = function (){
     timer.stop();
     $('#timer').hide();
+}
+
+var showWelcome = function (){
+
+}
+
+var showResult = function (){
+  $('#question').html("");
+  $("#options").hide();
+
 }

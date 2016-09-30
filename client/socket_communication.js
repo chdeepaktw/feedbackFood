@@ -8,6 +8,9 @@ socket.on('notification', function (data) {
   console.log(_data);
   $('#questionNumberContainer').show();
   $('#timer').show();
+  $('.buzzer').show();
+  $('.imageContainer').show();
+  document.getElementById("image-container").style.visibility = "visible";
   $('#welcome').hide();
   $('#endBadge').hide();
 
@@ -21,7 +24,9 @@ socket.on('notification', function (data) {
   $('#rightSection').show();
   $('#question').html(_data.question);
   $("#options").show();
+  $("#optionsStrip").show();
   $("#yellowButton").show();
+  document.getElementById("optionsStrip").style.visibility = "visible";
   document.getElementById("yellowButton").style.visibility = "visible";
 
   $('#optionA').html(_data.options[0]);
@@ -52,6 +57,7 @@ socket.on('gyan', function (data) {
   var _data = JSON.parse(data);
   console.log(_data);
   $("#options").hide();
+  $("#optionsStrip").hide();
   $('#gyan-message-wrong').html(_data);
 
 $('#wrongAnswerGyan').show();
@@ -63,6 +69,7 @@ socket.on('congratulations', function (data) {
   var _data = JSON.parse(data);
   console.log(_data);
   $("#options").hide();
+  $("#optionsStrip").hide();
   $('#gyan-message-correct').html(_data);
   $('#correctAnswerGyan').show();
   document.getElementById("correctAnswerGyan").style.visibility = "visible";
@@ -71,6 +78,7 @@ socket.on('congratulations', function (data) {
 socket.on('timeup', function (data) {
   stopTimer();
   $("#options").hide();
+  $("#optionsStrip").hide();
   $('#timeUpMessage').show();
 
 });
@@ -152,6 +160,7 @@ var setTimer = function(){
   });
   timer.addEventListener('targetAchieved', function (e) {
     $("#options").hide();
+    $("#optionsStrip").hide();
     $.ajax({ url: "http://localhost:8000/timeUp"}).then(function(data) {
      console.log('res'+ data);
                          });
@@ -182,6 +191,7 @@ var showResult = function (){
 
   $('#question').html("");
   $("#options").hide();
+  $("#optionsStrip").hide();
      $('#leftSection').hide();
   $('#rightSection').hide();
       $('#timer').hide();

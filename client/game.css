@@ -10,6 +10,7 @@
 body {
     margin: 0;
     background-color: #6b2669;
+    overflow: hidden;
 }
 
 p {
@@ -60,6 +61,7 @@ p {
     z-index: 1000;
     bottom: 128px;
     right: 70px;
+    visibility: hidden;
 }
 
 .badgeContainer {
@@ -142,7 +144,6 @@ p {
     height: 8%;
     vertical-align: middle;
     margin-right: 2%;
-    visibility: hidden;
 }
 .option {
     margin-bottom: 3%;
@@ -160,12 +161,12 @@ p {
     font-size: 30px;
     font-family: Shentox;
     font-weight: bold;
-    padding: 5%;
+    padding: 8px;
     font-weight: bold;
     text-align: center;
     visibility: hidden;
 }
-#wrongAnswerGyan, #correctAnswerGyan, #timeUpMessage {
+#wrongAnswerGyan, #correctAnswerGyan, #timeUpMessage, #optionsStrip {
     position: absolute;
     width: 100%;
     bottom: 14% ;
@@ -176,6 +177,9 @@ p {
 }
 #correctAnswerGyan {
     background-color: rgb(113,196,0);
+}
+#optionsStrip {
+    background-color: rgb(135,50,135);
 }
 #state-image {
         width: 414px;
@@ -198,4 +202,7 @@ p {
     font-size: 28px;
     font-family: PT Sans Narrow;
     line-height: 32px;
+}
+#options {
+    padding-top: 25px;
 }

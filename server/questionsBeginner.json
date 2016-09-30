@@ -9,22 +9,57 @@
 
   {
     "qId": 2,
+    "question": "User Experience is about making good looking UI ?",
+    "options": ["TRUE", "FALSE"],
+    "gyan": "Everyone suddenly wanted to be Apple, they went out and got their own UX Designer to sprinkle some happy experience on their product.",
+    "answer": "FALSE"
+  },
+
+  {
+    "qId": 3,
+    "question": "Visual design is a step of UX design process ?",
+    "options": ["TRUE","FALSE"],
+    "gyan": "Visual design is mostly visual. But 'Design' also encompasses sounds, smells, textures, flavors, ideas, associations, experiences, myths, and too many other things to mention.",
+    "answer": "TRUE"
+  },
+
+  {
+    "qId": 4,
     "question": "More features ≠ better design ?",
     "options": ["TRUE","FALSE"],
     "gyan": "More features are present in computer interface, not user-interface. Designer creates an feature heirarchy to decide what features to be present",
     "answer": "TRUE"
   },
 
+
   {
-    "qId": 3,
+    "qId": 5,
+    "question": "White space is a wasted space ?",
+    "options": ["TRUE", "FALSE"],
+    "gyan": "It takes concious effort for Designers to decide on layout, and empty space complement the content on the page to create balance.",
+    "answer": "FALSE"
+  },
+
+
+  {
+    "qId": 6,
+    "question": "Helvetica is a sans serif font ?",
+    "options": ["TRUE","FALSE"],
+    "gyan": "Helvetica belong to sans serif typeface.  Characteristics of san serif font are that they do not have little lines at the end of the character.",
+    "answer": "TRUE"
+  },
+
+
+  {
+    "qId": 7,
     "question": "Engage users with Bold text and bright colors ?",
     "options": ["TRUE","FALSE"],
-    "gyan": "It is not always about 'standing out'",
+    "gyan": "It is not always about 'standing out', we might miss on important information'",
     "answer": "FALSE"
   },
 
   {
-    "qId": 4,
+    "qId": 8,
     "question": "Design is about making a website look good ?",
     "options": ["TRUE", "FALSE"],
     "gyan": "Many people regard web design as decoration; the art of making a website look good. Design is about both form and function.",
@@ -32,10 +67,19 @@
   },
 
   {
-    "qId": 5,
+    "qId": 9,
+    "question": "People don’t scroll ?",
+    "options": ["TRUE","FALSE"],
+    "gyan": "Scroll acts as better usability for lengthy content, than redirecting to next page.",
+    "answer": "TRUE"
+  },
+
+
+  {
+    "qId": 10,
     "question": "Design is a process ?",
     "options": ["TRUE","FALSE"],
     "gyan": "Design goes through a process of discovering, defining, developing and delivering",
     "answer": "TRUE"
-  }
+  },
 ]

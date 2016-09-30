@@ -33,67 +33,49 @@
 
   {
     "qId": 5,
-    "question": "5 Who designed Facebook ?",
-    "options": ["Tom","Smith"],
-    "gyan": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
-    "answer": "Smith"
+    "question": "Multiple stakeholders' feedback will make the design worse ?",
+    "options": ["TRUE","FALSE"],
+    "gyan": "Many minds, many opinion, creates chaos.",
+    "answer": "TRUE"
   },
 
   {
     "qId": 6,
-    "question": "6 Who was the first designer recruited by ThoughtWorks ?",
-    "options": ["Somya","Ruchi"],
-    "gyan": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
-    "answer": "Ruchi"
+    "question": "All web based designs should be tested on all screens size ?",
+    "options": ["TRUE","FALSE"],
+    "gyan": "Many users work on different screen sizes. It is best to test on all screen sizes.",
+    "answer": "TRUE"
   },
 
   {
     "qId": 7,
-    "question": "7 Who invented Design ?",
-    "options": ["Smith", "Bob"],
-    "gyan": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
-    "answer": "Smith"
+    "question": "Responsive design for web will apply to Mobile app design ?",
+    "options": ["TRUE", "FALSE"],
+    "gyan": "Mobile app design is specific to App market, where as responsive web can be opened using any browser.",
+    "answer": "FALSE"
   },
 
   {
     "qId": 8,
-    "question": "8 Who designed Facebook ?",
-    "options": ["Tom","Smith"],
-    "gyan": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
-    "answer": "Smith"
+    "question": "User experience isn't just the responsibility of a person ?",
+    "options": ["TRUE","FALSE"],
+    "gyan": "There are many different breeds of practitioners that fall within the user experience umbrella. Like Researcher, Interface designer, Visual designer, etc",
+    "answer": "TRUE"
   },
 
   {
     "qId": 9,
-    "question": "9 Who was the first designer recruited by ThoughtWorks ?",
-    "options": ["Somya","Ruchi"],
-    "gyan": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
-    "answer": "Ruchi"
+    "question": "User testing is not required by an expert designer?",
+    "options": ["TRUE","FALSE"],
+    "gyan": "It is a misconception that designers experience is enough to release designs.",
+    "answer": "FALSE"
   },
 
   {
     "qId": 10,
-    "question": "10 Who invented Design ?",
-    "options": ["Smith", "Bob"],
-    "gyan": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
-    "answer": "Smith"
-  },
-
-  {
-    "qId": 11,
-    "question": " 11 Who designed Facebook ?",
-    "options": ["Tom","Smith"],
-    "gyan": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
-    "answer": "Smith"
-  },
-  {
-    "qId": 12,
-    "question": "12 Who was the first designer recruited by ThoughtWorks ?",
-    "options": [
-      "Somya",
-      "Ruchi"
-    ],
-    "gyan": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
-    "answer": "Ruchi"
+    "question": "Qualitative user research involves in depth interviews  ?",
+    "options": ["TRUE", "FALSE"],
+    "gyan": "In-depth interviews offer the opportunity to capture rich, descriptive data about people’s behaviours, attitudes and perceptions, and unfolding complex processes.",
+    "answer": "TRUE"
   }
 ]

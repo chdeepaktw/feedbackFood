@@ -9,6 +9,14 @@
 
   {
     "qId": 2,
+    "question": "Usability is about lack of ambiguity ?",
+    "options": ["TRUE","FALSE"],
+    "gyan": "Usability means making products and systems easier to use, and matching them more closely to user needs and requirements. It works around set of principles and guidance.",
+    "answer": "TRUE"
+  },
+
+  {
+    "qId": 3,
     "question": "More choices and features result in higher satisfaction ?",
     "options": ["TRUE","FALSE"],
     "gyan": "The more choices a website or web application offers, the harder it is to understand the interface. Having too many options often leads to decision paralysis and frustration.",
@@ -16,48 +24,56 @@
   },
 
   {
-    "qId": 3,
-    "question": "You are like your users ?",
-    "options": ["TRUE","FALSE"],
-    "gyan": "You are what you are !!!",
-    "answer": "FALSE"
-  },
-
-  {
     "qId": 4,
-    "question": "UX Designers are the User Advocate ?",
+    "question": "You are like your users ?",
     "options": ["TRUE", "FALSE"],
-    "gyan": "It suggests that it’s the designer’s job, not everybody’s job. In great companies, everyone is the user’s advocate.",
+    "gyan": "Every user is different from other in terms of behaviour, habit, thoughts, wants, etc. They can be young, old, male, female, many more.",
     "answer": "FALSE"
   },
 
   {
     "qId": 5,
-    "question": "Wireframes are old style, directly go to HTML ?",
-    "options": ["Tom","Smith"],
-    "gyan": "Wireframing gives flexible scope of testing with users and implementing immediate change",
+    "question": "UX Designers are the User Advocate ?",
+    "options": ["TRUE","FALSE"],
+    "gyan": "It suggests that it’s the designer’s job, not everybody’s job. In great companies, everyone is the user’s advocate.",
     "answer": "FALSE"
   },
 
   {
     "qId": 6,
-    "question": "Empty space in a design needs planning ?",
+    "question": "User research is a way to empathise with end users ?",
     "options": ["TRUE","FALSE"],
-    "gyan": "It takes serious thinking to ensure that empty spaces complement the entire website.",
+    "gyan": "Empathy is considered the Holy Grail of Design and user research techniques enables the ability to understand and identify with another person's context, emotions, goals, and motivations.",
     "answer": "TRUE"
   },
 
   {
     "qId": 7,
-    "question": "The designer will make sure our content is perfect ?",
+    "question": "Wireframes are old style, directly go to HTML ?",
     "options": ["TRUE", "FALSE"],
-    "gyan": "It is a teams effort to execute information and plan the flow",
+    "gyan": "Wireframing gives flexible scope of testing with users and implementing immediate change.",
     "answer": "FALSE"
   },
 
   {
     "qId": 8,
-    "question": "Design follows rules ?",
+    "question": "Empty space in a design needs planning ?",
+    "options": ["TRUE","FALSE"],
+    "gyan": "It takes serious thinking to ensure that \"empty\" spaces complement the entire website.",
+    "answer": "TRUE"
+  },
+
+  {
+    "qId": 9,
+    "question": "The designer will make sure our content is perfect ?",
+    "options": ["TRUE", "FALSE"],
+    "gyan": "It is a teams effort to execute information and plan the flow.",
+    "answer": "FALSE"
+  },
+
+  {
+    "qId": 10,
+    "question": "Design follows rules?",
     "options": ["TRUE","FALSE"],
     "gyan": "There can be no “design” unless there is a specific problem to solve. And any creative brief is basically a bunch of rules and parameters a designer is meant to follow.",
     "answer": "TRUE"

@@ -36,10 +36,13 @@ margin-bottom: 100px;
     visibility: hidden;
 }
 
-#endScore {
+#endScore, #gameOver {
  padding-top: 180px;
     padding-left: 180px;
 
+}
+#endScore {
+padding-top: 196px;
 }
 
 #topMargin {
@@ -89,7 +92,7 @@ margin-bottom: 100px;
     font-weight: bold;
 }
 
-#endMessage {
+#endMessage, #gameOverMessage {
     color: rgb(255,228,28);
     font-size: 5em;
     font-family: Shentox;

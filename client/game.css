@@ -55,6 +55,31 @@ p {
     bottom: 96px;
     right: 115px;
 }
+
+.welcomeContainer {
+    padding-top: 180px;
+    padding-left: 180px;
+    /*padding-right: 40px;*/
+}
+
+#welcomeMessage {
+    color: rgb(255,228,28);
+    font-size: 5em;
+    font-family: Shentox;
+    font-weight: bold;
+}
+
+.rules {
+    margin-bottom: 3%;
+}
+#rule-1, #rule-2, #rule-3 {
+    color: #fff;
+    vertical-align: middle;
+    font-size: 3em;
+    font-family: PT Sans Narrow;
+}
+
+
 .questionContainer {
     padding-top: 180px;
     padding-left: 180px;

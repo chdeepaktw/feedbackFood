@@ -1,99 +1,41 @@
 [
   {
   "qId": 1,
-  "question": " 1 Who invented Design ?",
-  "options": ["Smith", "Bob"],
-  "gyan": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
-  "answer": "Smith"
+  "question": "Simple = Minimal ?",
+  "options": ["TRUE", "FALSE"],
+  "gyan": "Minimalist style doesn’t always lead to product simplicity, Design decisions aiming for reduction can easily introduce more friction and cognitive load, leading to a more complex user experience",
+  "answer": "FALSE"
   },
 
   {
     "qId": 2,
-    "question": "2 Who designed Facebook ?",
-    "options": ["Tom","Smith"],
-    "gyan": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
-    "answer": "Smith"
+    "question": "More features ≠ better design ?",
+    "options": ["TRUE","FALSE"],
+    "gyan": "More features are present in computer interface, not user-interface. Designer creates an feature heirarchy to decide what features to be present",
+    "answer": "TRUE"
   },
 
   {
     "qId": 3,
-    "question": "3 Who was the first designer recruited by ThoughtWorks ?",
-    "options": ["Somya","Ruchi"],
-    "gyan": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
-    "answer": "Ruchi"
+    "question": "Engage users with Bold text and bright colors ?",
+    "options": ["TRUE","FALSE"],
+    "gyan": "It is not always about 'standing out'",
+    "answer": "FALSE"
   },
 
   {
     "qId": 4,
-    "question": " 4 Who invented Design ?",
-    "options": ["Smith", "Bob"],
-    "gyan": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
-    "answer": "Smith"
+    "question": "Design is about making a website look good ?",
+    "options": ["TRUE", "FALSE"],
+    "gyan": "Many people regard web design as decoration; the art of making a website look good. Design is about both form and function.",
+    "answer": "FALSE"
   },
 
   {
     "qId": 5,
-    "question": "5 Who designed Facebook ?",
-    "options": ["Tom","Smith"],
-    "gyan": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
-    "answer": "Smith"
-  },
-
-  {
-    "qId": 6,
-    "question": "6 Who was the first designer recruited by ThoughtWorks ?",
-    "options": ["Somya","Ruchi"],
-    "gyan": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
-    "answer": "Ruchi"
-  },
-
-  {
-    "qId": 7,
-    "question": "7 Who invented Design ?",
-    "options": ["Smith", "Bob"],
-    "gyan": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
-    "answer": "Smith"
-  },
-
-  {
-    "qId": 8,
-    "question": "8 Who designed Facebook ?",
-    "options": ["Tom","Smith"],
-    "gyan": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
-    "answer": "Smith"
-  },
-
-  {
-    "qId": 9,
-    "question": "9 Who was the first designer recruited by ThoughtWorks ?",
-    "options": ["Somya","Ruchi"],
-    "gyan": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
-    "answer": "Ruchi"
-  },
-
-  {
-    "qId": 10,
-    "question": "10 Who invented Design ?",
-    "options": ["Smith", "Bob"],
-    "gyan": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
-    "answer": "Smith"
-  },
-
-  {
-    "qId": 11,
-    "question": " 11 Who designed Facebook ?",
-    "options": ["Tom","Smith"],
-    "gyan": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
-    "answer": "Smith"
-  },
-  {
-    "qId": 12,
-    "question": "12 Who was the first designer recruited by ThoughtWorks ?",
-    "options": [
-      "Somya",
-      "Ruchi"
-    ],
-    "gyan": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
-    "answer": "Ruchi"
+    "question": "Design is a process ?",
+    "options": ["TRUE","FALSE"],
+    "gyan": "Design goes through a process of discovering, defining, developing and delivering",
+    "answer": "TRUE"
   }
 ]

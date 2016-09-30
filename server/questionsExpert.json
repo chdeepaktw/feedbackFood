@@ -1,34 +1,34 @@
 [
   {
     "qId": 1,
-    "question": " 1 Who invented Design ?",
-    "options": ["Smith", "Bob"],
-    "gyan": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
-    "answer": "Smith"
+    "question": "Aesthetics are not important if you have good usability ?",
+    "options": ["TRUE", "FALSE"],
+    "gyan": "There are set of practitioners who completely dismiss the importance of aesthetics, often citing unattractive but popular websites such as Craigslist.",
+    "answer": "FALSE"
   },
 
   {
     "qId": 2,
-    "question": "2 Who designed Facebook ?",
-    "options": ["Tom","Smith"],
-    "gyan": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
-    "answer": "Smith"
+    "question": "Search is used by user when they are unable to find a good navigational link ?",
+    "options": ["TRUE","FALSE"],
+    "gyan": "On a website, people usually scan for trigger words first and only use the search function when they’re unable to find a good enough navigational link.",
+    "answer": "TRUE"
   },
 
   {
     "qId": 3,
-    "question": "3 Who was the first designer recruited by ThoughtWorks ?",
-    "options": ["Somya","Ruchi"],
-    "gyan": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
-    "answer": "Ruchi"
+    "question": "All pages should be accessible in 3 clicks ?",
+    "options": ["TRUE","FALSE"],
+    "gyan": "The number of necessary clicks affects neither user satisfaction, nor success rate. Fewer clicks don’t make users happier and aren’t necessarily perceived as faster.",
+    "answer": "FALSE"
   },
 
   {
     "qId": 4,
-    "question": " 4 Who invented Design ?",
-    "options": ["Smith", "Bob"],
-    "gyan": "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
-    "answer": "Smith"
+    "question": "Customer is always right ?",
+    "options": ["TRUE", "FALSE"],
+    "gyan": "Henry Ford once stated, \"If I asked people what they wanted, they would have said faster horses.\"",
+    "answer": "FALSE"
   },
 
   {

@@ -6,26 +6,36 @@ socket.on('notification', function (data) {
   // convert the json string into a valid javascript object
   var _data = JSON.parse(data);
   console.log(_data);
+  $('#questionNumberContainer').show();
+  $('#timer').show();
+  $('#welcome').hide();
+  $('#endBadge').hide();
+
   document.getElementById("questionNumberContainer").style.visibility = "visible";
 
   document.getElementById("timer").style.visibility = "visible";
 
-  $('#welcome').hide();
   document.getElementById("endBadge").style.visibility = "hidden";
 
   $('#leftSection').show();
   $('#rightSection').show();
   $('#question').html(_data.question);
   $("#options").show();
+  $("#yellowButton").show();
   document.getElementById("yellowButton").style.visibility = "visible";
 
   $('#optionA').html(_data.options[0]);
+  $("#optionBIcon").show();
+  $("#optionAIcon").show();
   document.getElementById("optionBIcon").style.visibility = "visible";
 document.getElementById("optionAIcon").style.visibility = "visible";
 
   $('#optionB').html(_data.options[1]);
   $('#currentQuestionNumber').html(_data.questionCount);
 
+$("#correctAnswerGyan").hide();
+$("#wrongAnswerGyan").hide();
+$("#timeUpMessage").hide();
   document.getElementById("correctAnswerGyan").style.visibility = "hidden";
   document.getElementById("wrongAnswerGyan").style.visibility = "hidden";
   document.getElementById("timeUpMessage").style.visibility = "hidden";
@@ -44,6 +54,7 @@ socket.on('gyan', function (data) {
   $("#options").hide();
   $('#gyan-message-wrong').html(_data);
 
+$('#wrongAnswerGyan').show();
   document.getElementById("wrongAnswerGyan").style.visibility = "visible";
 });
 
@@ -53,6 +64,7 @@ socket.on('congratulations', function (data) {
   console.log(_data);
   $("#options").hide();
   $('#gyan-message-correct').html(_data);
+  $('#correctAnswerGyan').show();
   document.getElementById("correctAnswerGyan").style.visibility = "visible";
 });
 
@@ -134,7 +146,7 @@ var setTimer = function(){
 
     $('#timer').show();
  timer = new Timer();
-  timer.start({precision: 'seconds', startValues: {seconds: 10}, countdown: true});
+//  timer.start({precision: 'seconds', startValues: {seconds: 10}, countdown: true});
   timer.addEventListener('secondsUpdated', function (e) {
     $('#countdown').html(timer.getTimeValues().toString(['seconds']));
   });
@@ -143,6 +155,7 @@ var setTimer = function(){
     $.ajax({ url: "http://localhost:8000/timeUp"}).then(function(data) {
      console.log('res'+ data);
                          });
+     $('#timeUpMessage').show();
     document.getElementById("timeUpMessage").style.visibility = "visible";
   });
 }
@@ -158,6 +171,10 @@ var showWelcome = function (){
 }
 
 var showResult = function (){
+  $('#endBadge').show();
+  $('#correctAnswerGyan').hide();
+  $('#wrongAnswerGyan').hide();
+  $('#timeUpMessage').hide();
   document.getElementById("endBadge").style.visibility = "visible";
   document.getElementById("correctAnswerGyan").style.visibility = "hidden";
   document.getElementById("wrongAnswerGyan").style.visibility = "hidden";

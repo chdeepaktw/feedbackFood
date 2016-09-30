@@ -58,8 +58,8 @@ p {
 .imageContainer {
     position: absolute;
     z-index: 1000;
-    bottom: 96px;
-    right: 115px;
+    bottom: 128px;
+    right: 70px;
 }
 
 .badgeContainer {
@@ -102,22 +102,22 @@ p {
 
 }
 .questionContainer {
-    padding-top: 180px;
-    padding-left: 180px;
+    padding-top: 100px;
+    padding-left: 100px;
     /*padding-right: 40px;*/
 }
 .rightContainer {
-    padding-top: 180px;
-    padding-right: 180px;
+    padding-top: 120px;
+    padding-right: 120px;
 }
 #question {
     color: #fff;
-    font-size: 75px;
+    font-size: 56px;
     font-family: PT Sans Narrow;
     font-weight: bold;
     margin-bottom: 10%;
-    lin-height: 80px;
-    height: 400px;
+    line-height: 62px;
+    height: 275px;
     margin: auto 0px;
 }
 #questionNumberContainer {
@@ -127,13 +127,13 @@ p {
 }
 #currentQuestionNumber {
     color: rgb(255,228,28);
-    font-size: 5em;
+    font-size: 50px;
     font-family: Shentox;
     font-weight: bold;
 }
 #totalQuestionsText {
     color: rgb(255,228,28);
-    font-size: 3em;
+    font-size: 32px;
     font-family: Shentox;
 
 }
@@ -156,8 +156,8 @@ p {
 .timer {
     color: #6b2669;
     background-color: rgb(255,228,28);
-    margin-top: 5%;
-    font-size: 40px;
+
+    font-size: 30px;
     font-family: Shentox;
     font-weight: bold;
     padding: 5%;
@@ -168,7 +168,7 @@ p {
 #wrongAnswerGyan, #correctAnswerGyan, #timeUpMessage {
     position: absolute;
     width: 100%;
-    bottom: 12% ;
+    bottom: 14% ;
     visibility: hidden;
 }
 #wrongAnswerGyan, #timeUpMessage {
@@ -178,23 +178,24 @@ p {
     background-color: rgb(113,196,0);
 }
 #state-image {
-    width: 100%;
-    height: 100%;
+        width: 414px;
+        height: 450px;
 }
 .gyan {
     color: #fff;
-    margin-left: 180px;
+    margin-left: 100px;
     margin-top: 30px;
     width: 52%;
-    height: 240px;
+    height: 220px;
 }
 .gyan-title {
-    font-size: 75px;
+    font-size: 56px;
     font-family: PT Sans Narrow;
     font-weight: bold;
     margin-bottom: 10px;
 }
 .gyan-message {
-    font-size: 36px;
+    font-size: 28px;
     font-family: PT Sans Narrow;
+    line-height: 32px;
 }

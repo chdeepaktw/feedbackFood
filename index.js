@@ -45,7 +45,7 @@ app.get('/submitAnswer', function (req, res) {
             gs.setCurrentQuestion();
             triggerNextAction();
             res.send('Request Completed');
-        }, 2000);
+        }, 6000);
     } else if(isCorrect == false){
         var player = require('play-sound')(opts = {})
         player.play('audio/wrong.mp3', function(err){})
@@ -58,7 +58,7 @@ app.get('/submitAnswer', function (req, res) {
             gs.setCurrentQuestion();
             triggerNextAction();
             res.send('Request Completed');
-        }, 2000);
+        }, 6000);
     } else {
         console.log('Option Button Pressed without Question. Restarting Game');
         gs.startGame();

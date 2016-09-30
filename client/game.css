@@ -23,6 +23,10 @@ p {
     border: 1px solid gray;
 }
 
+#tag {
+margin-bottom: 100px;
+}
+
 
 #welcome {
 
@@ -93,12 +97,12 @@ p {
 }
 
 .rules {
-    margin-bottom: 3%;
+   
     color: #fff;
     vertical-align: middle;
     font-size: 3em;
     font-family: PT Sans Narrow;
-}
+    }
 
 #rule-end {
 
@@ -205,4 +209,11 @@ p {
 }
 #options {
     padding-top: 25px;
+}
+
+#tagMessage {
+	color: yellow;
+	font-size: 28px;
+    font-family: PT Sans Narrow;
+    
 }

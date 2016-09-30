@@ -44,7 +44,7 @@ module.exports = {
   },
 
   triggerNextAction: function(){
-    if(totalQuestionNumber > 10 || score == 10 || score < 0){
+    if(totalQuestionNumber >= 10 || score == 10 ){
         return undefined;
     } else if( totalQuestionNumber <= 10)
     {

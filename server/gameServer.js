@@ -67,7 +67,7 @@ module.exports = {
         totalQuestionNumber = 0;
         curQuestion = undefined;
         var tempScore = score;
-        score = 2;
+        score = 0;
         return tempScore;
   },
 

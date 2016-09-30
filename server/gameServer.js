@@ -1,6 +1,9 @@
 module.exports = {
   startGame: function () {
     totalQuestionNumber =0;
+    sessionQuestionsBeginner =[];
+    sessionQuestionsIntermediate=[];
+    sessionQuestionsExpert=[];
   },
 
  loadQuestions: function () {

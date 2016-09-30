@@ -28,6 +28,12 @@ p {
 }
 
 #endBadge {
+    visibility: hidden;
+}
+
+#endScore {
+ padding-top: 180px;
+    padding-left: 180px;
 
 }
 
@@ -56,6 +62,14 @@ p {
     right: 115px;
 }
 
+.badgeContainer {
+    position: absolute;
+    z-index: 1000;
+    bottom: 96px;
+    right: 215px;
+}
+
+
 .welcomeContainer {
     padding-top: 180px;
     padding-left: 180px;
@@ -63,6 +77,13 @@ p {
 }
 
 #welcomeMessage {
+    color: rgb(255,228,28);
+    font-size: 5em;
+    font-family: Shentox;
+    font-weight: bold;
+}
+
+#endMessage {
     color: rgb(255,228,28);
     font-size: 5em;
     font-family: Shentox;

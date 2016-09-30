@@ -71,7 +71,7 @@
     "question": "People don’t scroll ?",
     "options": ["TRUE","FALSE"],
     "gyan": "Scroll acts as better usability for lengthy content, than redirecting to next page.",
-    "answer": "TRUE"
+    "answer": "FALSE"
   },
 
 

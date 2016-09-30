@@ -146,7 +146,7 @@ var setTimer = function(){
 
     $('#timer').show();
  timer = new Timer();
-//  timer.start({precision: 'seconds', startValues: {seconds: 10}, countdown: true});
+  timer.start({precision: 'seconds', startValues: {seconds: 10}, countdown: true});
   timer.addEventListener('secondsUpdated', function (e) {
     $('#countdown').html(timer.getTimeValues().toString(['seconds']));
   });

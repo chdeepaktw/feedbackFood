@@ -16,6 +16,7 @@ console.log('server listening on localhost:8000');
 app.get('/', function(req, res){
     res.sendfile('/client/game.html', { root: __dirname  } );
     gs.loadQuestions();
+//    socketGlobal.volatile.emit('welcome', "");
 });
 
 app.get('/startGame', function (req, res) {

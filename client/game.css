@@ -23,6 +23,14 @@ p {
 }
 
 
+#welcome {
+
+}
+
+#endBadge {
+
+}
+
 #topMargin {
     height: 20%;
     align: top;
@@ -68,6 +76,8 @@ p {
 }
 #questionNumberContainer {
     margin-bottom: 3%;
+    visibility: hidden;
+
 }
 #currentQuestionNumber {
     color: rgb(255,228,28);
@@ -79,12 +89,14 @@ p {
     color: rgb(255,228,28);
     font-size: 3em;
     font-family: Shentox;
+
 }
 .buzzer {
     width: 8%;
     height: 8%;
     vertical-align: middle;
     margin-right: 2%;
+    visibility: hidden;
 }
 .option {
     margin-bottom: 3%;
@@ -105,6 +117,7 @@ p {
     padding: 5%;
     font-weight: bold;
     text-align: center;
+    visibility: hidden;
 }
 #wrongAnswerGyan, #correctAnswerGyan, #timeUpMessage {
     position: absolute;

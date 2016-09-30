@@ -6,6 +6,13 @@ socket.on('notification', function (data) {
   // convert the json string into a valid javascript object
   var _data = JSON.parse(data);
   console.log(_data);
+  document.getElementById("questionNumberContainer").style.visibility = "visible";
+
+  document.getElementById("timer").style.visibility = "visible";
+
+  $('#welcome').hide();
+  $('#leftSection').show();
+  $('#rightSection').show();
   $('#question').html(_data.question);
   $("#options").show();
   document.getElementById("yellowButton").style.visibility = "visible";
@@ -19,6 +26,8 @@ socket.on('notification', function (data) {
   document.getElementById("correctAnswerGyan").style.visibility = "hidden";
   document.getElementById("wrongAnswerGyan").style.visibility = "hidden";
   document.getElementById("timeUpMessage").style.visibility = "hidden";
+
+
 
   setLevel(_data.score);
   setTimer();
@@ -58,6 +67,10 @@ socket.on('end', function (data) {
   $('#score').html(_data);
   $('#question').html("");
   $("#options").hide();
+});
+
+socket.on('welcome', function (data) {
+  showWelcome()
 });
 
 
@@ -111,7 +124,8 @@ var stopTimer = function (){
 }
 
 var showWelcome = function (){
-
+  $('#leftSection').hide();
+  $('#rightSection').hide();
 }
 
 var showResult = function (){

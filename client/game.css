@@ -71,8 +71,6 @@ p {
 
 .rules {
     margin-bottom: 3%;
-}
-#rule-1, #rule-2, #rule-3 {
     color: #fff;
     vertical-align: middle;
     font-size: 3em;

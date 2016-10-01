@@ -195,4 +195,7 @@ var showResult = function (){
      $('#leftSection').hide();
   $('#rightSection').hide();
       $('#timer').hide();
+       setTimeout(function(){
+              location.reload();
+            }, 2000);
 }

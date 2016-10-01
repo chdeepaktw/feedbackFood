@@ -4,6 +4,11 @@ module.exports = {
     sessionQuestionsBeginner =[];
     sessionQuestionsIntermediate=[];
     sessionQuestionsExpert=[];
+    currentQuestionIndex = undefined;
+    totalQuestionNumber = 0;
+    curQuestion = undefined;
+    score =0;
+
   },
 
  loadQuestions: function () {
@@ -47,6 +52,7 @@ module.exports = {
   },
 
   triggerNextAction: function(){
+
     if(totalQuestionNumber >= 10 || score == 10 ){
         return undefined;
     } else if( totalQuestionNumber <= 10)
